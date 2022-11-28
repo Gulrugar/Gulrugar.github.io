@@ -1,0 +1,88 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: rgb(40, 40, 40);
+  color: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid cyan;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 0 10px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+header ul li a:hover {
+  color: blueviolet;
+}
+
+main {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 1000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 10px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 10px;
+  border: 1px solid white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 2px;
+}
+.container a {
+  width: 100%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container a:hover {
+  opacity: 0.5;
+}
+.container a img {
+  width: 100%;
+}
+
+footer {
+  height: 100px;
+  border-top: 1px solid cyan;
+  width: 100%;
+}
