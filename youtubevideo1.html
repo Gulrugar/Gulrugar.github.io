@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./maintenance website/favicon.ico" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>HomePage</title>
+    <title>YouTube Favorite</title>
   </head>
   <body>
     <header>
@@ -16,7 +16,7 @@
           <h1>Gul Web Media</h1>
         </div>
       </a>
-
+      <a href="/" class="return-btn">Return to HomePage</a>
       <ul>
         <li>
           <a href="/"
@@ -42,38 +42,46 @@
       </ul>
     </header>
     <main>
-      <div class="container">
-        <div class="blurb">
-          <h3>An Early Youtube Favorite</h3>
-          <p>
-            A very early video from my Youtube favorites. The Achievement Hunter
-            crew plays minecraft and one of them makes a verbal flub and tries
-            to play it off as a slang. Or does he?
-          </p>
-          <h3>Date published: 11/28/2022</h3>
-        </div>
-
-        <a href="./youtubevideo1.html" class="img-preview-link">
-          <img src="./images/youtubevideo1-preview.png" alt="" />
-        </a>
+      <div
+        class="container single-item"
+        style="
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          border-radius: 25px;
+          background-color: rgb(255, 65, 65);
+          border: none;
+          margin-top: 15px;
+          min-width: 672px;
+          max-width: 750px;
+        "
+      >
+        <iframe
+          width="672"
+          height="378"
+          src="https://www.youtube.com/embed/udzTSIhpp3U"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
-      <div class="container">
-        <div class="blurb">
-          <h3>Javascript HTML Canvas game from Chris Courses</h3>
-          <p>
-            Here is a game that I made in a walkthrough that features area
-            transitions. You play as a Viking that can move around with the WASD
-            keys he can jump and enter doors with 'W'.
-          </p>
-          <a href="https://www.youtube.com/@ChrisCourses"
-            ><i class="fa-solid fa-link"></i> YouTube Link</a
-          >
-          <h3>Date published: 11/27/2022</h3>
-        </div>
-
-        <a href="./game/game.html" class="img-preview-link">
-          <img src="./images/game-preview.jpg" alt="" />
-        </a>
+      <div
+        class="container single-item"
+        style="
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          margin-top: 15px;
+          background-color: rgb(60, 60, 60);
+          border: none;
+        "
+      >
+        <p>
+          A very early video from my Youtube favorites. The Achievement Hunter
+          crew plays minecraft and one of them makes a verbal flub and tries to
+          play it off as a slang. Or does he?
+        </p>
       </div>
     </main>
 
