@@ -4,84 +4,211 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./maintenance website/favicon.ico" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>HomePage</title>
+    <title>DevDrew Web Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+      crossorigin="anonymous"
+    />
+
+    <!-- Update these with your own fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <a href="/">
-        <div class="header-icon">
-          <img src="./images/header-icon.png" alt="" />
-          <h1>Gul Web Media</h1>
-        </div>
-      </a>
+    <header id="home">
+      <div class="logo">
+        <img src="./img/devjane.png" alt="" />
+      </div>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#services" class="nav__link">My Services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">My Work</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <ul>
-        <li>
-          <a href="/"
-            ><i class="fa-sharp fa-solid fa-thumbtack fa-xs"></i> Home</a
-          >
+    <!-- Introduction -->
+    <section class="intro">
+      <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Drew Oswaldo</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle--intro">
+        Shopify Theme Developer
+      </p>
+      <img
+        src="./img/dev-jane-01.jpg"
+        alt="a picture of Drew"
+        class="intro__img"
+      />
+    </section>
+
+    <!-- My services -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title--services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Shopify</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae
+            facilis eligendi quidem laboriosam, eius saepe iure ab iusto
+            placeat, ipsa laborum maxime officiis veniam itaque? Eligendi nobis
+            quibusdam consequuntur quam reprehenderit labore at quas vitae.
+          </p>
+        </div>
+        <!-- service -->
+
+        <div class="service">
+          <h3>Search Engine Optimization</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+            maxime voluptate velit assumenda enim quo delectus! Cum aut
+            repellendus, non ab delectus quo vel laborum doloribus dolorem quos!
+            In deserunt dignissimos explicabo. Unde, ipsum animi.
+          </p>
+        </div>
+        <!-- service -->
+
+        <div class="service">
+          <h3>Design + Development</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            ipsum sunt reprehenderit, iusto alias voluptatem consectetur modi
+            harum fugiat veniam. Cupiditate, tenetur voluptatem! Labore
+            assumenda error ducimus libero accusamus dolorum iste! Rerum
+            eligendi repellendus eum.
+          </p>
+        </div>
+        <!-- service -->
+      </div>
+      <!-- services -->
+
+      <a href="#work" class="btn">My Work</a>
+    </section>
+
+    <!-- About Me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title--about">Who I am</h2>
+      <p class="section__subtitle section__subtitle--about">
+        Designer & developer based out of NYC
+      </p>
+
+      <div class="about-me__body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+          impedit quod tempore ea quidem architecto.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ex
+          voluptate voluptates odio nesciunt blanditiis?
+        </p>
+      </div>
+      <!-- NOTE: add strings for alt text in these img tags-->
+      <img src="./img/dev-jane-02.jpg" alt="" class="about-me__img" />
+    </section>
+
+    <!-- My Work -->
+    <section class="my-work" id="work">
+      <h2 class="section__title section__title--work">My work</h2>
+      <p class="section__subtitle section__subtitle--work">
+        A selection of my range of work
+      </p>
+      <div class="portfolio">
+        <!-- Portfolio item 01 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-01.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 02 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-02.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 03 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-03.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 04 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-04.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 05 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-05.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 06 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-06.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 07 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-07.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 08 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-08.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 09 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-09.jpg" alt="" class="portfolio__img" />
+        </a>
+        <!-- Portfolio item 10 -->
+        <a href="#" class="portfolio__item">
+          <img src="./img/portfolio-10.jpg" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <!-- NOTE: make a new gmail account and replace the one below -->
+      <a href="mailto:droswsender@gmail.com" class="footer__link"
+        >droswsender@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://codepen.io">
+            <i class="fab fa-codepen"></i>
+          </a>
         </li>
-        <li>
-          <a
-            href="https://worldofwarcraft.com/en-us/character/us/greymane/hozgul"
-            ><i class="fa-sharp fa-solid fa-thumbtack fa-xs"></i> WoW Armory</a
-          >
+        <li class="social-list__item">
+          <a class="social-list__link" href="http://dribbble.com">
+            <i class="fab fa-dribbble"></i>
+          </a>
         </li>
-        <li>
-          <a href="/"
-            ><i class="fa-sharp fa-solid fa-thumbtack fa-xs"></i> Link 3</a
-          >
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://twitter.com">
+            <i class="fab fa-twitter"></i>
+          </a>
         </li>
-        <li>
-          <a href="/"
-            ><i class="fa-sharp fa-solid fa-thumbtack fa-xs"></i> Link 4</a
-          >
+        <li class="social-list__item">
+          <a class="social-list__link" href="https://github.com">
+            <i class="fab fa-github"></i>
+          </a>
         </li>
       </ul>
-    </header>
-    <main>
-      <div class="container">
-        <div class="blurb">
-          <h3>An Early Youtube Favorite</h3>
-          <p>
-            A very early video from my Youtube favorites. The Achievement Hunter
-            crew plays minecraft and one of them makes a verbal flub and tries
-            to play it off as a slang. Or does he?
-          </p>
-          <h3>Date published: 11/28/2022</h3>
-        </div>
+    </footer>
 
-        <a href="./youtubevideo1.html" class="img-preview-link">
-          <img src="./images/youtubevideo1-preview.png" alt="" />
-        </a>
-      </div>
-      <div class="container">
-        <div class="blurb">
-          <h3>Javascript HTML Canvas game from Chris Courses</h3>
-          <p>
-            Here is a game that I made in a walkthrough that features area
-            transitions. You play as a Viking that can move around with the WASD
-            keys he can jump and enter doors with 'W'.
-          </p>
-          <a href="https://www.youtube.com/@ChrisCourses"
-            ><i class="fa-solid fa-link"></i> YouTube Link</a
-          >
-          <h3>Date published: 11/27/2022</h3>
-        </div>
-
-        <a href="./game/game.html" class="img-preview-link">
-          <img src="./images/game-preview.jpg" alt="" />
-        </a>
-      </div>
-    </main>
-
-    <footer></footer>
+    <script src="./js/script.js"></script>
   </body>
-  <script
-    src="https://kit.fontawesome.com/30c1bf608b.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="./script.js"></script>
 </html>

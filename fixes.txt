@@ -1,0 +1,7 @@
+!!! Before implementing any changes make a commit and push your code to github
+
+1. the mobile menu blips (check out weeklyhow's udemy tutorial to see how t get rid of that, also i believe traversy media also had a way to deal with it for his space-x clone tutorial)
+
+2. Add a full menu header on desktops with dropdowns to individual projects
+3. Add drop downs to the hamburger menu
+4. Add dark mode switcher
