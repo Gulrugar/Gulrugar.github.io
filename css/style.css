@@ -15,7 +15,8 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-accent: #6e9fff;
+  /* --clr-accent: #16e0bd; */
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -457,10 +458,17 @@ header {
 
 .social-list__item {
   margin: 0 0.5em;
+  display: flex;
+  background: var(--clr-accent);
+  border-radius: 20%;
 }
 
 .social-list__link {
   padding: 0.5em;
+}
+
+.social-list__link img {
+  width: 2rem;
 }
 
 /* Individula portfolio item styles */

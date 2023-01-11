@@ -5,3 +5,6 @@
 2. Add a full menu header on desktops with dropdowns to individual projects
 3. Add drop downs to the hamburger menu
 4. Add dark mode switcher
+
+notes:
+add a "My Skills" section after "What I do" section
