@@ -1,6 +1,6 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelectorAll(".nav__link");
-const nav = document.querySelector("nav");
+const nav = document.querySelector(".nav");
 
 // new menu
 const overlay = document.getElementById("overlay");
