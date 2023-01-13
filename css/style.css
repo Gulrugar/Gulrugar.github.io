@@ -408,12 +408,33 @@ h3 {
 }
 
 .portfolio__item {
+  position: relative;
   background: var(--clr-accent);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .portfolio__img {
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio__title {
+  position: absolute;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  z-index: 5;
+  padding: 5px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio__item:hover .portfolio__title {
+  opacity: 0.5;
 }
 
 .portfolio__item:focus {
