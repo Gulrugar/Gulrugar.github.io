@@ -356,7 +356,7 @@ h3 {
 @media (min-width: 600px) {
   .about-me {
     display: grid;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 250px;
     grid-template-areas:
       "title img"
       "subtitle img"
@@ -607,6 +607,10 @@ h3 {
   box-shadow: var(--bs);
 }
 
+.contact h3 {
+  text-align: center;
+}
+
 .contact > * {
   padding: 1em;
 }
@@ -655,5 +659,9 @@ h3 {
 @media (min-width: 800px) {
   .contact > * {
     padding: 2em;
+  }
+
+  .contact h3 {
+    padding: 2em 0 1em;
   }
 }
