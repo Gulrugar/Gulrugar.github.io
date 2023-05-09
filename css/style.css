@@ -52,8 +52,9 @@ body {
   line-height: 1.6;
 }
 
-section {
-  padding: 5em 2em;
+section
+ {
+  padding: 2em 2em;
 }
 
 img {
@@ -438,7 +439,26 @@ h3 {
   transition: opacity 0.5s ease-in-out;
 }
 
-.portfolio__item:hover .portfolio__title {
+.portfolio__item-badge {
+  position: absolute;
+  background: blue;
+  color: #fff;
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  z-index: 5;
+  padding: 5px;
+  right: 5px;
+  top: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.portfolio__item-badge--new {
+  background-color: yellow;
+  color: var(--clr-dark);
+}
+
+.portfolio__item:hover .portfolio__title,
+.portfolio__item:hover .portfolio__item-badge {
   opacity: 0.5;
 }
 
@@ -507,11 +527,25 @@ h3 {
 
 /* Individula portfolio item styles */
 
-.portfolio-item-individual {
+.portfolio-item-individual,
+.portfolio-items-other {
   padding: 0 2em 2em;
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.portfolio-items-other {
+  display: flex;
+  justify-content: center;
+  gap: 0 20px;
+  text-align: center;
+}
+.portfolio-items-other ul {
+  list-style: none;
+  padding: 0;
+}
+
+
 
 .portfolio-item-individual div {
   max-width: 600px;
@@ -583,7 +617,15 @@ h3 {
 
 .desktop-main-menu ul {
   display: flex;
+  margin-bottom: 0;
 }
+
+.lower-menu {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
 
 .desktop-main-menu ul li {
   position: relative;
@@ -704,4 +746,13 @@ h3 {
   border: 2px solid #635da8;
   border-radius: 5px;
   margin: .5rem 0;
+}
+
+#updates {
+  color: black;
+  text-align: center;
+  font-size: var(--fs-h3);
+  font-family: var(--ff-secondary);
+  padding: 1em 0;
+  font-weight: var(--fw-bold);
 }
