@@ -15,7 +15,8 @@
 
   --clr-light: #fff;
   --clr-dark: #303030;
-  --clr-accent: #6e9fff;
+  --clr-accent: #43ccfa;
+  /* --clr-accent: #6e9fff; */
   /* --clr-accent: #16e0bd; */
 
   --fs-h1: 3rem;
@@ -57,8 +58,7 @@ body {
   line-height: 1.6;
 }
 
-section
- {
+section {
   padding: 2em 2em;
 }
 
@@ -550,8 +550,6 @@ h3 {
   padding: 0;
 }
 
-
-
 .portfolio-item-individual div {
   max-width: 600px;
   display: flex;
@@ -573,7 +571,6 @@ h3 {
 .portfolio-item-individual a:hover {
   text-decoration: underline;
 }
-
 
 .portfolio-item-individual p {
   max-width: 600px;
@@ -630,7 +627,6 @@ h3 {
   display: flex;
   justify-content: center;
 }
-
 
 .desktop-main-menu ul li {
   position: relative;
@@ -741,7 +737,6 @@ h3 {
   }
 }
 
-
 /* my styles */
 .portfolio-item-individual .github-link {
   font-size: 1.25rem;
@@ -750,7 +745,7 @@ h3 {
 .portfolio-item-individual img {
   border: 2px solid #635da8;
   border-radius: 5px;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 }
 
 #updates {

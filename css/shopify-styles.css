@@ -1,0 +1,84 @@
+.aashop.page-width {
+  width: 100vw;
+}
+
+section.aashop.page-width {
+  margin: 0 auto;
+}
+
+.aashop-section-padding {
+  padding-top: 0;
+  padding-bottom: 36px;
+}
+
+.aashop-main-page-title {
+  margin-bottom: 3rem;
+}
+
+.aashop-page-title {
+  margin-top: 0;
+}
+
+.aashop .rte p {
+  font-size: 1.2rem;
+}
+
+.aashop .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aashop .col-3,
+.aashop .col-6 {
+  padding-top: 36px;
+}
+
+.aashop .col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aashop .col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.aashop svg {
+  width: 40px;
+  display: inline;
+  padding-top: 10px;
+}
+
+.aashop ul {
+  padding-left: 0;
+}
+
+.aashop li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aashop li span:first-child {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 849px) {
+  .aashop .collapse-col {
+    display: none;
+  }
+
+  .aashop .expand-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .aashop .row {
+    flex-direction: column;
+  }
+}
