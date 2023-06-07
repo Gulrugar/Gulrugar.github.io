@@ -569,7 +569,8 @@ h3 {
   font-size: 1.5rem;
   color: #635da8;
 }
-.portfolio-item-individual a::after {
+
+.portfolio-item-individual a:not(.no-after)::after {
   content: " »";
 }
 
