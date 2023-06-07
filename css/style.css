@@ -152,7 +152,7 @@ h3 {
   align-items: center;
   height: 100px;
   padding: 0 30px;
-  border-bottom: 1px solid gray;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -749,11 +749,16 @@ h3 {
 }
 
 #updates {
+  background: linear-gradient(
+    127deg,
+    rgba(254, 217, 81, 1) 11%,
+    rgba(255, 70, 199, 1) 81%
+  );
   color: black;
   text-align: center;
   font-size: var(--fs-h3);
   font-family: var(--ff-secondary);
-  padding: 1em 0;
+  padding: 0.25em 0;
   font-weight: var(--fw-bold);
 }
 
