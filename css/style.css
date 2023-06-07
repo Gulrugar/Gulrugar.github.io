@@ -18,6 +18,11 @@
   --clr-accent: #43ccfa;
   /* --clr-accent: #6e9fff; */
   /* --clr-accent: #16e0bd; */
+  --clr-gradient: linear-gradient(
+    127deg,
+    rgba(254, 217, 81, 1) 11%,
+    rgba(255, 70, 199, 1) 81%
+  );
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -446,7 +451,7 @@ h3 {
 
 .portfolio__item-badge {
   position: absolute;
-  background: blue;
+  background: var(--clr-accent);
   color: #fff;
   font-size: var(--fs-h4);
   font-weight: var(--fw-bold);
@@ -458,8 +463,8 @@ h3 {
 }
 
 .portfolio__item-badge--new {
-  background-color: yellow;
-  color: var(--clr-dark);
+  background: var(--clr-gradient);
+  color: var(--clr-light);
 }
 
 .portfolio__item:hover .portfolio__title,
@@ -749,11 +754,7 @@ h3 {
 }
 
 #updates {
-  background: linear-gradient(
-    127deg,
-    rgba(254, 217, 81, 1) 11%,
-    rgba(255, 70, 199, 1) 81%
-  );
+  background: var(--clr-gradient);
   color: var(--clr-dark);
   text-align: center;
   font-size: var(--fs-h3);
