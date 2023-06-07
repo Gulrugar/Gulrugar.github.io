@@ -754,7 +754,7 @@ h3 {
     rgba(254, 217, 81, 1) 11%,
     rgba(255, 70, 199, 1) 81%
   );
-  color: black;
+  color: var(--clr-dark);
   text-align: center;
   font-size: var(--fs-h3);
   font-family: var(--ff-secondary);
