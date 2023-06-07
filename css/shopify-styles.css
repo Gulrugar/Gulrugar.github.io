@@ -10,6 +10,12 @@
 
 .aashop .details {
   grid-area: details;
+  display: flex;
+  justify-content: center;
+}
+
+.aashop .details > div {
+  max-width: 600px;
 }
 
 .aashop .specialty {
@@ -41,13 +47,13 @@ section.aashop.page-width {
   font-size: 1.2rem;
 }
 
-.aashop .col-3,
-.aashop .col-6 {
+.aashop .col-narrow,
+.aashop .col-large {
   padding-top: 36px;
 }
 
-.aashop .col-3 > div {
-  margin-top: 100px;
+.aashop .col-narrow > div {
+  margin-top: 70px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -55,7 +61,7 @@ section.aashop.page-width {
   flex-direction: column;
 }
 
-.aashop .col-3 h3 {
+.aashop .col-narrow h3 {
   text-decoration: underline;
 }
 
@@ -87,16 +93,29 @@ section.aashop.page-width {
 }
 
 .aashop .icon-express {
-  width: 60px;
+  width: 70px;
   height: 40px;
 }
 
-.aashop .icon-php {
+.aashop .icon-php,
+.aashop .icon-django,
+.aashop .icon-node {
   width: 60px;
   padding: 0;
 }
 
 /* Icons END */
+
+/* Custom Elements START */
+
+.aashop .divider {
+  width: 90%;
+  height: 2px;
+  background-color: var(--clr-accent);
+  margin: 15px 0;
+}
+
+/* Custom Elements END */
 
 /* Media Queries */
 
@@ -111,7 +130,7 @@ section.aashop.page-width {
     grid-template-columns: 1fr 1fr;
   }
 
-  .aashop .col-3 > div {
+  .aashop .col-narrow > div {
     margin-top: 0;
   }
 }

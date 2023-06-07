@@ -756,3 +756,8 @@ h3 {
   padding: 1em 0;
   font-weight: var(--fw-bold);
 }
+
+/* Tailwind Style Classes */
+.underline {
+  text-decoration: underline;
+}
