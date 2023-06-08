@@ -149,6 +149,7 @@ h3 {
 
 .main-header {
   display: flex;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -213,10 +214,6 @@ h3 {
 
 .nav-open .nav {
   transform: translateX(0);
-}
-
-.nav-open .nav-toggle {
-  position: fixed;
 }
 
 .nav-open .hamburger {
