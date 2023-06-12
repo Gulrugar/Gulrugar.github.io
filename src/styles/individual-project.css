@@ -1,0 +1,48 @@
+/* Individula portfolio item styles */
+
+.portfolio-item-individual,
+.portfolio-items-other {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-items-other {
+  display: flex;
+  justify-content: center;
+  gap: 0 20px;
+  text-align: center;
+}
+.portfolio-items-other ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-item-individual div {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.portfolio-item-individual a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #635da8;
+}
+
+.portfolio-item-individual a:not(.no-after)::after {
+  content: " »";
+}
+
+.portfolio-item-individual a:hover {
+  text-decoration: underline;
+}
+
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

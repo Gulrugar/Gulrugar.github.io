@@ -1,0 +1,305 @@
+---
+import { Icon } from "astro-icon";
+
+const heroImage =
+  "images/Intro/profile_picture_final_square_1080x1080_full.jpg";
+---
+
+<section class="section-padding">
+  <div class="row page-width">
+    <div class="col-narrow stack">
+      <div>
+        <h3>My Stack: MERNG</h3>
+        <ul>
+          <li>
+            <span>Mongo DB &nbsp;</span>
+            <span class="icon-container">
+              <Icon
+                name="vscode-icons:file-type-mongo"
+                width="50"
+                height="50"
+              />
+            </span>
+          </li>
+          <li>
+            <span>Express.js &nbsp;</span>
+            <span class="icon-container">
+              <Icon name="logos:express" width="60" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>React.js</span>
+            <span class="icon-container">
+              <Icon name="logos:react" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Node.js</span>
+            <span class="icon-container">
+              <Icon name="logos:nodejs" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>GraphQL</span>
+            <span class="icon-container">
+              <Icon name="logos:graphql" width="50" height="50" />
+            </span>
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Other Backends</h3>
+        <ul>
+          <li>
+            <span>Django - Python</span>
+            <span class="icon-container">
+              <Icon name="logos:django" width="60" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Laravel - PHP</span>
+            <span class="icon-container">
+              <Icon name="logos:laravel" width="50" height="50" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-large details">
+      <div>
+        <h1 class="main-page-title page-title">Andrew Aguirre</h1>
+        <div class="rte">
+          <p>
+            Shopify Developer looking for a remote position and a modest salary
+            with a great work environment that's all about helping each other
+            grow
+          </p>
+        </div>
+        <a href={heroImage} class="intro__img">
+          <img src={heroImage} alt="a picture of Drew" />
+        </a>
+        <div class="hero-btn-wrapper">
+          <a href="#work" class="btn">My Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-narrow specialty">
+      <div>
+        <h3>Specialty</h3>
+        <ul>
+          <li>
+            <span>Shopify Platform</span>
+            <span class="icon-container">
+              <Icon name="logos:shopify" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Shopify Liquid</span>
+            <span>
+              <img
+                class="icon-shopify-liquid"
+                src="images/Intro/iconLiquid.png"
+                alt="liquid icon"
+              />
+            </span>
+          </li>
+          <li>
+            <span>HTML, CSS, Javascript</span>
+            <span class="flex">
+              <span class="icon-container mr-5">
+                <Icon
+                  name="vscode-icons:file-type-html"
+                  width="50"
+                  height="50"
+                />
+              </span>
+              <span class="icon-container mr-5">
+                <Icon
+                  name="vscode-icons:file-type-css"
+                  width="50"
+                  height="50"
+                />
+              </span>
+              <span class="icon-container">
+                <Icon name="logos:javascript" width="50" height="50" />
+              </span>
+            </span>
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Other</h3>
+        <ul>
+          <li>
+            <span>WordPress & PHP</span>
+            <span class="flex">
+              <span class="icon-container mr-10">
+                <Icon name="iconWordpress" width="50" height="50" />
+              </span>
+              <span class="icon-container">
+                <Icon name="logos:php" width="50" height="50" />
+              </span>
+            </span>
+          </li>
+          <li>
+            <span>Design & Layout</span>
+            <span>w/ Figma</span>
+            <span class="icon-container">
+              <Icon name="logos:figma" width="50" height="50" />
+            </span>
+            <span class="underline">Image Manipulation</span>
+            <span>w/ Photoshop</span>
+            <span class="icon-container">
+              <Icon name="iconPhotoshop" width="50" height="50" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .row {
+    display: grid;
+    grid-template-areas: "stack details specialty";
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .stack {
+    grid-area: stack;
+  }
+
+  .details {
+    grid-area: details;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details > div {
+    max-width: 600px;
+  }
+
+  .specialty {
+    grid-area: specialty;
+  }
+
+  .page-width {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .section-padding {
+    padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  .main-page-title {
+    margin-bottom: 3rem;
+  }
+
+  .page-title {
+    margin-top: 0;
+  }
+
+  .rte p {
+    font-size: 1.2rem;
+  }
+
+  .col-narrow,
+  .col-large {
+    padding-top: 36px;
+  }
+
+  .col-narrow > div {
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .col-narrow h3 {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  li span:first-child {
+    text-decoration: underline;
+  }
+
+  /* individual styles */
+  .flex {
+    display: flex;
+  }
+
+  .mr-5 {
+    margin-right: 5px;
+  }
+
+  .mr-10 {
+    margin-right: 10px;
+  }
+
+  /* Custom Elements START */
+
+  .divider {
+    width: 90%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    margin: 15px 0;
+  }
+
+  .hero-btn-wrapper {
+    display: flex;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .hero-btn-wrapper .btn {
+    font-size: 1rem;
+  }
+  /* Icons START */
+
+  .icon-container {
+    display: flex;
+    padding-top: 5px;
+  }
+
+  .icon-shopify-liquid {
+    width: 60px;
+    padding-top: 5px;
+  }
+
+  /* Icons END */
+
+  /* Media Queries */
+
+  @media screen and (max-width: 849px) {
+    .row {
+      flex-direction: column;
+      display: grid;
+      grid-template-areas: "details details" "stack specialty";
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .col-narrow > div {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 1099px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+</style>

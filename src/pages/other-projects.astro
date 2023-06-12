@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Other Projects">
+  <!-- Introduction -->
+  <section class="intro">
+    <h1 class="section__title section__title--intro">
+      My<strong>Projects</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">Other</p>
+    <img
+      src="/images/project-placeholder.jpg"
+      alt="description of a project"
+      class="intro__img"
+    />
+  </section>
+
+  <div class="portfolio-items-other">
+    <div>
+      <h3>PHP</h3>
+      <ul>
+        <li>
+          <a href="#">Other Project 1</a>
+        </li>
+        <li>
+          <a href="#">Other Project 2</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Node.js</h3>
+      <ul>
+        <li>
+          <a href="#">Other Project 3</a>
+        </li>
+        <li>
+          <a href="#">Other Project 4</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .portfolio-items-other {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .portfolio-items-other {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+    text-align: center;
+  }
+  .portfolio-items-other ul {
+    list-style: none;
+    padding: 0;
+  }
+</style>

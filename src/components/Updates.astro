@@ -1,0 +1,17 @@
+---
+const { updatedAt } = Astro.props;
+---
+
+<div id="updates">Updated: {updatedAt}</div>
+
+<style>
+  #updates {
+    background: var(--clr-gradient);
+    color: var(--clr-dark);
+    text-align: center;
+    font-size: var(--fs-h3);
+    font-family: var(--ff-secondary);
+    padding: 0.25em 0;
+    font-weight: var(--fw-bold);
+  }
+</style>
