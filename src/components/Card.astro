@@ -47,9 +47,6 @@ const {
     <Fragment set:html={shortIntro} />
   </p>
   <div>
-    <div class="title-content">
-      <Icon name="iconStack" width="30" height="30" />
-    </div>
     <ul class="tag-list">
       {tags && tags.map((tag) => <li class="tag">{tag}</li>)}
     </ul>
@@ -99,10 +96,6 @@ const {
   .title-content {
     text-align: center;
     width: 100%;
-  }
-
-  .title-content svg {
-    color: var(--clr-accent);
   }
 
   .h3 {
