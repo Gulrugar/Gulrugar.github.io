@@ -1,10 +1,10 @@
 ---
+order: 1
 title: Drew's Youtube Merch
 slug: project-1
 imageSquare: /images/projects/project-2/drews-youtube-merch-600x600.png
 imageBanner: /images/projects/project-2//drews-youtube-merch-banner.png
 badge: New
-
 tags: ["HTML", "CSS", "Javascript", "Liquid"]
 
 stylizedTitle: <strong>Drew's</strong>Youtube Merch<strong></strong>
@@ -12,7 +12,7 @@ stylizedSubtitle: Youtuber Branded Merchandise
 storeLink: https://drews-youtube-merch.myshopify.com
 githubLink: https://github.com/Gulrugar/Game-Grumps-Merch-Clone
 storePassword: devdrew
-shortIntro: <p>Drew's Youtube Merch is a shopify store based on the website merch.gamegrumps</p>
+shortIntro: <p>Drew's Youtube Merch is a shopify store based on the website merch.gamegrumps.com</p>
 ---
 
 <p>

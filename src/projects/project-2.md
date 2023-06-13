@@ -1,4 +1,5 @@
 ---
+order: 2
 title: Drew's Flower Shop
 slug: project-2
 imageSquare: /images/projects/project-1/drews-flowershop-600x600.png

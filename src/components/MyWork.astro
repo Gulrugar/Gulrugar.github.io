@@ -1,7 +1,9 @@
 ---
-const projects = await Astro.glob("../projects/*.md");
-
 import Card from "./Card.astro";
+import { formatProjects } from "../js/utils.js";
+
+const projects = await Astro.glob("../projects/*.md");
+const formattedProjects = formatProjects(projects, { limit: 4 });
 ---
 
 <!-- My Work -->
@@ -10,7 +12,7 @@ import Card from "./Card.astro";
     <h2 class="section__title section__title--work">My work</h2>
     <p class="section__subtitle section__subtitle--work">Checkout my stores</p>
     <div class="project-styles">
-      {projects.map((project) => <Card {project} />)}
+      {formattedProjects.map((project) => <Card {project} />)}
     </div>
   </div>
 </section>
