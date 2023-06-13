@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+const { lazyLoading = false } = Astro.props;
 const {
   imageSquare = "/images/project-placeholder.jpg",
   badge,
@@ -14,7 +15,12 @@ const {
 
 <div class="blog-card">
   <a href={githubLink} class="img-link" target="_blank">
-    <img src={imageSquare} alt="" class="img portfolio__img" />
+    <img
+      src={imageSquare}
+      alt=""
+      class="img portfolio__img"
+      loading={lazyLoading ? "lazy" : "eager"}
+    />
     {
       badge == "New" ? (
         <p class="portfolio__item-badge portfolio__item-badge--new">

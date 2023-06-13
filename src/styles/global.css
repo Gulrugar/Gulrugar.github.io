@@ -623,6 +623,11 @@ h3 {
 }
 
 /* my styles */
+.page-width {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 .portfolio-item-individual .github-link {
   font-size: 1.25rem;
 }

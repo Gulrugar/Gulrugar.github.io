@@ -3,7 +3,7 @@ import Card from "./Card.astro";
 import { formatProjects } from "../js/utils.js";
 
 const projects = await Astro.glob("../projects/*.md");
-const formattedProjects = formatProjects(projects, { limit: 4 });
+const formattedProjects = formatProjects(projects, { limit: 6 });
 ---
 
 <!-- My Work -->
@@ -11,8 +11,12 @@ const formattedProjects = formatProjects(projects, { limit: 4 });
   <div>
     <h2 class="section__title section__title--work">My work</h2>
     <p class="section__subtitle section__subtitle--work">Checkout my stores</p>
-    <div class="project-styles">
-      {formattedProjects.map((project) => <Card {project} />)}
+    <div class="project-styles page-width">
+      {
+        formattedProjects.map((project) => (
+          <Card {project} lazyLoading={true} />
+        ))
+      }
     </div>
   </div>
 </section>
@@ -31,8 +35,6 @@ const formattedProjects = formatProjects(projects, { limit: 4 });
   }
 
   .project-styles {
-    max-width: 1500px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
     place-items: center;
