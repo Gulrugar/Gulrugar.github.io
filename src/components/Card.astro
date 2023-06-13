@@ -1,36 +1,172 @@
 ---
-export interface Props {
-  title?: string;
-  link?: string;
-  imageSquare?: string;
-  badge?: string;
-}
-
+import { Icon } from "astro-icon";
 const {
-  title = "Title",
-  imageSquare = "../Images/project-placeholder.jpg",
-  link = "",
-  badge = "",
-} = Astro.props as Props;
+  imageSquare = "/images/project-placeholder.jpg",
+  badge,
+  title,
+  tags,
+  storeLink,
+  githubLink,
+  shortIntro,
+  storePassword,
+} = Astro.props.project.frontmatter;
 ---
 
-<a href={link} class="portfolio__item">
-  <img src={imageSquare} alt="" class="portfolio__img" />
-  <p class="portfolio__title">{title}</p>
-  {
-    badge == "New" ? (
-      <p class="portfolio__item-badge portfolio__item-badge--new">
-        &#9734; New &#9734;
-      </p>
-    ) : (
-      ""
-    )
+<div class="blog-card">
+  <a href={githubLink} class="img-link" target="_blank">
+    <img src={imageSquare} alt="" class="img portfolio__img" />
+    {
+      badge == "New" ? (
+        <p class="portfolio__item-badge portfolio__item-badge--new">
+          &#9734; New &#9734;
+        </p>
+      ) : (
+        ""
+      )
+    }
+    {
+      badge == "Updated" ? (
+        <p class="portfolio__item-badge">&#9734; Updated &#9734;</p>
+      ) : (
+        ""
+      )
+    }
+  </a>
+
+  <div class="title-content">
+    <h3 class="h3">{title}</h3>
+    <hr class="hr" />
+  </div>
+  <p class="card-info">
+    <Fragment set:html={shortIntro} />
+  </p>
+  <div>
+    <div class="title-content">
+      <Icon name="iconStack" width="30" height="30" />
+    </div>
+    <ul class="tag-list">
+      {tags && tags.map((tag) => <li class="tag">{tag}</li>)}
+    </ul>
+  </div>
+  <div class="password">
+    Store Password:
+    <strong>{storePassword}</strong>
+  </div>
+  <ul class="utility-list">
+    <a href={storeLink} class="btn" target="_blank">View Store</a>
+    <a href={githubLink} class="btn" target="_blank">Github</a>
+  </ul>
+</div>
+
+<style>
+  /* .bhtXlo */
+  .blog-card {
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--clr-dark);
+    box-shadow: var(--clr-accent) 1px 1px 10px;
+    text-align: center;
+    overflow: hidden;
+    width: 344px;
   }
-  {
-    badge == "Updated" ? (
-      <p class="portfolio__item-badge">&#9734; Updated &#9734;</p>
-    ) : (
-      ""
-    )
+
+  strong {
+    margin-left: 0.5rem;
   }
-</a>
+
+  .img-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .img-link:hover img {
+    opacity: 1;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .title-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title-content svg {
+    color: var(--clr-accent);
+  }
+
+  .h3 {
+    margin: 15px 0 0 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--clr-accent);
+    padding: 0px;
+    font-size: 1.5rem;
+  }
+
+  .hr {
+    width: 50px;
+    height: 3px;
+    margin: 20px auto;
+    border-radius: 0px none;
+    border: 0;
+    background: rgb(208, 187, 87);
+  }
+
+  .card-info {
+    padding: 0 50px;
+    color: #fff;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  .tag-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .tag {
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+  }
+
+  .password {
+    margin-top: 0.5rem;
+  }
+
+  .utility-list {
+    list-style-type: none;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    justify-content: space-around;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  .btn {
+    display: block;
+    padding: 0.75em;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  @media screen and (min-width: 416px) {
+    .blog-card {
+      width: 400px;
+    }
+  }
+</style>

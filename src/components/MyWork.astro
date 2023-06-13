@@ -1,30 +1,53 @@
 ---
 const projects = await Astro.glob("../projects/*.md");
 
-import projectPlaceholder from "/images/project-placeholder.jpg";
-
-import Card from "../components/Card.astro";
+import Card from "./Card.astro";
 ---
 
 <!-- My Work -->
 <section class="my-work" id="work">
-  <h2 class="section__title section__title--work">My work</h2>
-  <p class="section__subtitle section__subtitle--work">Checkout my stores</p>
-  <div class="portfolio">
-    {
-      projects.map((project) => (
-        <Card
-          title={project.frontmatter.title}
-          link={`/projects/${project.frontmatter.slug}`}
-          imageSquare={project.frontmatter.imageSquare}
-          badge={project.frontmatter.badge}
-        />
-      ))
-    }
-    <!-- Empty Project -->
-    <a class="portfolio__item">
-      <img src={projectPlaceholder} alt="" class="portfolio__img" />
-      <p class="portfolio__title">Next Project - Under Construction</p>
-    </a>
+  <div>
+    <h2 class="section__title section__title--work">My work</h2>
+    <p class="section__subtitle section__subtitle--work">Checkout my stores</p>
+    <div class="project-styles">
+      {projects.map((project) => <Card {project} />)}
+    </div>
   </div>
 </section>
+
+<div>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+  <a href=""></a>
+</div>
+
+<style>
+  section.my-work {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project-styles {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+    place-items: center;
+    gap: 3rem 2rem;
+  }
+
+  /* Media Queries */
+
+  @media screen and (min-width: 416px) {
+    .project-styles {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    section.my-work {
+      padding: 2em 2em;
+    }
+  }
+</style>

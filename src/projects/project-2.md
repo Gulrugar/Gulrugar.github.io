@@ -5,6 +5,8 @@ imageSquare: /images/projects/project-1/drews-flowershop-600x600.png
 imageBanner: /images/projects/project-1/drews-flowershop-banner.png
 badge: Updated
 
+tags: ["HTML", "CSS", "Javascript", "Liquid"]
+
 stylizedTitle: <strong>Drew's</strong><strong>Flower Shop</strong>
 stylizedSubtitle: Shopify flower store
 storeLink: http://drews-flowershop.myshopify.com
