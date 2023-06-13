@@ -13,7 +13,7 @@ stylizedSubtitle: Shopify flower store
 storeLink: http://drews-flowershop.myshopify.com
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
 storePassword: staylt
-shortIntro: <p>Drew's Flower Shop is a shopify store based on the website fromyouflowers.com.</p>
+shortIntro: <p>A Shopify store that specializes in selling flowers for various occasions</p>
 ---
 
 <p>

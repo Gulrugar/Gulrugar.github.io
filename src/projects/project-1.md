@@ -12,7 +12,7 @@ stylizedSubtitle: Youtuber Branded Merchandise
 storeLink: https://drews-youtube-merch.myshopify.com
 githubLink: https://github.com/Gulrugar/Game-Grumps-Merch-Clone
 storePassword: devdrew
-shortIntro: <p>Drew's Youtube Merch is a shopify store based on the website merch.gamegrumps.com</p>
+shortIntro: <p>A Shopify store for selling T-Shirts and other branded merchandise</p>
 ---
 
 <p>
