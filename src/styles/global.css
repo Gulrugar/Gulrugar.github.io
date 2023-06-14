@@ -268,7 +268,7 @@ h3 {
   position: relative;
 }
 
-.intro__img {
+.intro__img img {
   box-shadow: var(--bs);
 }
 

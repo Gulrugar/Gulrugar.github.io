@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 ---
 
 <section class="page-width about-page-width" id="about">
@@ -8,22 +9,32 @@
         <h2 class="section__title section__title--about">About</h2>
         <div class="rte about-rte w-richtext">
           <p>
-            I am a graduate of the University of Southern California, Los
-            Angeles, with a B.S. in Math. I am a former active military member,
-            having served as a United States Coastguardsman.
+            I started learning to code so that I could make flash cards from
+            data I scraped from the internet. As I became more experienced, I
+            started making my own games.
           </p>
           <p>
-            I became interested in coding after using the programming language
-            Python to automate the creation of flashcards for the popular
-            flashcard app Anki. I was amazed by the power of coding when I
-            transformed approximately 24 hours of manual card creation into just
-            one hour of enjoyable reading, while my computer generated the cards
-            for me.
+            Eventually I wanted to build my own website but that just lead me
+            down a rabbit hole of frameworks until I decided to go with the
+            popular MERN stack.
+          </p>
+          <p>
+            As my skills grew, I realized that I wanted to make coding my career
+            and I thought about how I could provide the most value to people
+            using my skills.
+          </p>
+          <p>
+            Seeing that Ecommerce was becoming very popular, and that Ecommerce
+            had produced some of the most incredible websites I had ever seen, I
+            became a Shopify Developer and started building stores for clients.
           </p>
         </div>
       </div>
       <div class="home-about-image">
-        <img src="/images/project-placeholder.jpg" alt="" loading="lazy" />
+        <a href="/images/about-me.jpg" target="_blank">
+          <img src="/images/about-me.jpg" alt="" loading="lazy" />
+          <Icon name="iconMagnifyingLens" width="40" height="40" />
+        </a>
       </div>
     </div>
   </div>
@@ -50,14 +61,35 @@
 
   p {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     line-height: 26px;
+  }
+
+  .home-about-image {
+    flex: 0 50%;
+    position: relative;
+  }
+
+  .home-about-image svg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border-radius: 25% 0 0 0;
+    border-top: 1px solid var(--clr-light);
+    border-left: 1px solid var(--clr-light);
+  }
+
+  .home-about-image a:hover svg {
+    transform: scale(1.1);
   }
 
   img {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
+    box-shadow: var(--bs);
   }
 
   @media screen and (max-width: 599px) {
