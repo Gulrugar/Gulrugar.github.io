@@ -1,0 +1,69 @@
+---
+const { prevUrl, nextUrl, currentPage, lastPage } = Astro.props;
+
+const morePages = lastPage > 1;
+---
+
+<nav>
+  <div>
+    {
+      prevUrl && (
+        <a href={prevUrl} class="btn">
+          Prev
+        </a>
+      )
+    }
+    <div class="page-numbers">
+      {
+        morePages &&
+          Array.from({ length: lastPage }, (_, i) => i + 1).map(
+            (pageNumber) => (
+              <a
+                class="btn"
+                href={
+                  currentPage == pageNumber
+                    ? ""
+                    : `/projects/${pageNumber == 1 ? "" : pageNumber}`
+                }
+              >
+                {pageNumber}
+              </a>
+            )
+          )
+      }
+    </div>
+    {
+      nextUrl && (
+        <a href={nextUrl} class="btn">
+          Next
+        </a>
+      )
+    }
+  </div>
+</nav>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: center;
+    background: var(--clr-dark);
+    padding: 20px 0;
+  }
+  nav a,
+  .page-numbers {
+    margin-right: 5px;
+  }
+
+  a[href=""] {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  .page-numbers {
+    display: inline-block;
+  }
+
+  .btn {
+    padding: 0.5em 1em;
+  }
+</style>

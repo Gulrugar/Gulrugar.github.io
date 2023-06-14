@@ -1,0 +1,62 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Pagination from "../../components/Pagination.astro";
+import Card from "../../components/Card.astro";
+import { formatProjects } from "../../js/utils.js";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("../../projects/*.md");
+  const formattedProjects = formatProjects(allPosts);
+
+  return paginate(formattedProjects, {
+    pageSize: 6,
+  });
+}
+
+const { page } = Astro.props;
+const { prev: prevUrl, next: nextUrl } = page.url;
+const { currentPage, lastPage } = page;
+---
+
+<Layout title="Projects">
+  <section class="my-work">
+    <div>
+      <h2 class="section__title section__title--work">My work</h2>
+      <p class="section__subtitle section__subtitle--work">
+        Checkout my stores
+      </p>
+      <div class="project-styles page-width">
+        {page.data.map((project) => <Card {project} lazyLoading={true} />)}
+      </div>
+    </div>
+  </section>
+  <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} />
+</Layout>
+
+<style>
+  section.my-work {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .project-styles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+    place-items: center;
+    gap: 3rem 2rem;
+  }
+
+  /* Media Queries */
+
+  @media screen and (min-width: 416px) {
+    .project-styles {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    section.my-work {
+      padding: 2em 2em;
+    }
+  }
+</style>

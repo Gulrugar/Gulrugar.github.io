@@ -1,7 +1,6 @@
 ---
 order: 1
 title: Drew's Youtube Merch
-slug: project-1
 imageSquare: /images/projects/project-2/drews-youtube-merch-600x600.png
 imageBanner: /images/projects/project-2//drews-youtube-merch-banner.png
 badge: New
