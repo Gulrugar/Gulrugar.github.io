@@ -1,5 +1,5 @@
 ---
-const { prevUrl, nextUrl, currentPage, lastPage } = Astro.props;
+const { prevUrl, nextUrl, currentPage, lastPage, path } = Astro.props;
 
 const morePages = lastPage > 1;
 ---
@@ -23,7 +23,7 @@ const morePages = lastPage > 1;
                 href={
                   currentPage == pageNumber
                     ? ""
-                    : `/projects/${pageNumber == 1 ? "" : pageNumber}`
+                    : `/${path}/${pageNumber == 1 ? "" : pageNumber}`
                 }
               >
                 {pageNumber}

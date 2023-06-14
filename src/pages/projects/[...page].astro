@@ -16,21 +16,20 @@ export async function getStaticPaths({ paginate }) {
 const { page } = Astro.props;
 const { prev: prevUrl, next: nextUrl } = page.url;
 const { currentPage, lastPage } = page;
+const path = "/projects";
 ---
 
 <Layout title="Projects">
   <section class="my-work">
     <div>
-      <h2 class="section__title section__title--work">My work</h2>
-      <p class="section__subtitle section__subtitle--work">
-        Checkout my stores
-      </p>
+      <h2 class="section__title section__title--work">All Projects</h2>
+      <p class="section__subtitle section__subtitle--work"></p>
       <div class="project-styles page-width">
         {page.data.map((project) => <Card {project} lazyLoading={true} />)}
       </div>
     </div>
   </section>
-  <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} />
+  <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} {path} />
 </Layout>
 
 <style>

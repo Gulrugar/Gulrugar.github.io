@@ -11,7 +11,7 @@ stylizedTitle: <strong>Drew's</strong><strong>Flower Shop</strong>
 stylizedSubtitle: Shopify flower store
 storeLink: http://drews-flowershop.myshopify.com
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
-storePassword: staylt
+storePassword: devdrew
 shortIntro: <p>A Shopify store that specializes in selling flowers for various occasions</p>
 ---
 

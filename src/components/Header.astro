@@ -1,7 +1,7 @@
 ---
 ---
 
-<header id="home" class="main-header">
+<header class="main-header" id="home">
   <div class="page-width">
     <div class="logo">
       <a href="/#home">
@@ -54,26 +54,30 @@
   </div>
 </header>
 
+<style>
+  .logo:hover {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    5% {
+      transform: rotate(5deg);
+    }
+    15% {
+      transform: rotate(-5deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>
+
 <script>
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelectorAll(".nav__link");
-  const nav = document.querySelector(".nav");
-
-  // new menu
-
-  navToggle.addEventListener("click", () => {
-    document.body.classList.toggle("nav-open");
-    document.body.classList.toggle("stop-scrolling");
-  });
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-      document.body.classList.remove("stop-scrolling");
-    });
-  });
-
-  window.onload = () => {
-    nav.style.display = "block";
-  };
+  import "../js/nav.js";
 </script>

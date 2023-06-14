@@ -6,7 +6,7 @@ const heroImage =
 ---
 
 <section class="section-padding">
-  <div class="row page-width">
+  <div class="row">
     <div class="col-narrow stack">
       <div>
         <h3>My Stack: MERNG</h3>
@@ -147,6 +147,8 @@ const heroImage =
 
 <style>
   .row {
+    max-width: 1188px;
+    margin: 0 auto;
     display: grid;
     grid-template-areas: "stack details specialty";
     grid-template-columns: 1fr 2fr 1fr;
@@ -168,11 +170,6 @@ const heroImage =
 
   .specialty {
     grid-area: specialty;
-  }
-
-  .page-width {
-    max-width: 1500px;
-    margin: 0 auto;
   }
 
   .section-padding {
