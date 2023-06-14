@@ -57,11 +57,32 @@ const {
   </div>
   <ul class="utility-list">
     <a href={storeLink} class="btn" target="_blank">View Store</a>
-    <a href={githubLink} class="btn" target="_blank">Github</a>
+    <a href={githubLink} class="btn" target="_blank">Github Repo</a>
   </ul>
 </div>
 
 <style>
+  /* Badges */
+  .portfolio__item-badge {
+    background: var(--clr-accent);
+    color: #fff;
+    font-size: var(--fs-h4);
+    font-weight: var(--fw-bold);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    z-index: 5;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .portfolio__item-badge--new {
+    background: var(--clr-gradient);
+    color: var(--clr-light);
+  }
+
   /* .bhtXlo */
   .blog-card {
     color: #fff;

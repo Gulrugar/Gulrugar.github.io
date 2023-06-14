@@ -22,9 +22,18 @@ const formattedProjects = formatProjects(projects, { limit: 6 });
 </section>
 
 <style>
-  section.my-work {
+  .my-work {
     padding-left: 0;
     padding-right: 0;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+  }
+
+  .section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
   }
 
   .project-styles {
