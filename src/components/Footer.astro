@@ -1,0 +1,141 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-info-wrapper">
+      <div class="footer-info">
+        <img class="footer-logo logo" src="/images/devDrew.png" alt="" />
+        <p>Shopify Developer</p>
+      </div>
+      <div class="footer-menu">
+        <h5 class="footer-menu-heading">Social</h5>
+        <a
+          href="https://www.instagram.com/gulrugar/"
+          class="footer-link"
+          target="_blank"
+        >
+          <Icon name="iconInstagram" width="30" height="30" />
+          <div class="footer-social-link-p">Instagram</div>
+        </a>
+        <a
+          href="https://www.facebook.com/andrew.aguirre.94/"
+          class="footer-link"
+          target="_blank"
+        >
+          <Icon name="iconFacebook" width="30" height="30" />
+          <div class="footer-social-link-p">Facebook</div>
+        </a>
+      </div>
+      <div class="footer-menu">
+        <h5 class="footer-menu-heading">Other</h5>
+        <a class="footer-link" target="_blank">
+          <Icon name="iconArt" width="30" height="30" />
+          <div class="footer-social-link-p">Art Blog</div>
+        </a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <Fragment set:html="© Andrew Aguirre 2023" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #f8f8fa;
+    border-bottom: 1px solid #e4ebf3;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1188px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .footer-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-info {
+    flex: 50%;
+  }
+
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+
+  .footer-info p {
+    margin-left: 20px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    flex: 25%;
+    align-items: flex-start;
+    padding-right: 16px;
+    display: flex;
+  }
+
+  .footer-menu-heading {
+    color: #aeaeb5;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .footer-link {
+    color: #1d1d1f;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .footer-link:hover {
+    transform: scale(1.1);
+  }
+
+  .footer-link svg {
+    display: block;
+    position: absolute;
+  }
+
+  .footer-social-link-p {
+    margin-bottom: 0;
+    margin-left: 40px;
+    line-height: 24px;
+  }
+
+  .footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #e4ebf3;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .footer-copyright {
+    color: #3a4554;
+  }
+</style>

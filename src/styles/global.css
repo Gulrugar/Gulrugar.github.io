@@ -483,57 +483,6 @@ h3 {
   opacity: 0.75;
 }
 
-/* Footer */
-
-.footer {
-  background: #111;
-  color: var(--clr-accent);
-  text-align: center;
-  padding: 2.5em 0;
-  font-size: var(--fs-h3);
-}
-
-.footer a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer__link {
-  font-weight: var(--fw-bold);
-}
-
-.footer__link:hover,
-.social-list__link:hover {
-  opacity: 0.7;
-}
-
-.footer__link:hover {
-  text-decoration: underline;
-}
-
-.social-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 2em 0 0;
-  padding: 0;
-}
-
-.social-list__item {
-  margin: 0 0.5em;
-  display: flex;
-  background: var(--clr-accent);
-  border-radius: 20%;
-}
-
-.social-list__link {
-  padding: 0.5em;
-}
-
-.social-list__link img {
-  width: 2rem;
-}
-
 /* T.M. Nav Setup: Overlay */
 .overlay-show {
   position: fixed;
@@ -636,16 +585,6 @@ h3 {
   border: 2px solid #635da8;
   border-radius: 5px;
   margin: 0.5rem 0;
-}
-
-#updates {
-  background: var(--clr-gradient);
-  color: var(--clr-dark);
-  text-align: center;
-  font-size: var(--fs-h3);
-  font-family: var(--ff-secondary);
-  padding: 0.25em 0;
-  font-weight: var(--fw-bold);
 }
 
 /* Tailwind Style Classes */
