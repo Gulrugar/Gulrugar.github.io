@@ -1,37 +1,14 @@
 ---
 order: 2
-title: Drew's Flower Shop
-imageSquare: /images/projects/project-1/drews-flowershop-600x600.png
-imageBanner: /images/projects/project-1/drews-flowershop-banner.png
-badge: Updated
-
+title: Drew's Youtube Merch
+image: /images/projects/project-2/drews-youtube-merch-600x600.png
+badge:
 tags: ["HTML", "CSS", "Javascript", "Liquid"]
-
-stylizedTitle: <strong>Drew's</strong><strong>Flower Shop</strong>
-stylizedSubtitle: Shopify flower store
-storeLink: http://drews-flowershop.myshopify.com
-githubLink: http://github.com/Gulrugar/DrewsFlowerShop
+storeLink: https://drews-youtube-merch.myshopify.com
 storePassword: devdrew
-shortIntro: <p>A Shopify store that specializes in selling flowers for various occasions</p>
+githubLink: https://github.com/Gulrugar/Game-Grumps-Merch-Clone
+shortIntro: <p>A Shopify store for selling T-Shirts and other branded merchandise</p>
 ---
 
-<p>
-  This is my first project so I tried to incorporate as many shopify
-  features as I could think of. Mostly adapting features from Shopify's
-  Dawn theme to features found on the website fromyouflowers.com.
-</p>
-<p>
-  I would say the part I'm most proud of is the functionality of the image
-  gallery on the product page.
-  <a
-    class="github-link"
-    href="http://github.com/Gulrugar/DrewsFlowerShop/blob/master/assets/carousel.js"
-    target="_blank"
-    >See assets/carousel.js in the GitHub repo</a
-  >
-</p>
-<p>
-  That's because most of it is my original code and the only guidance I
-  could find for it was vague suggestions of how the code works that I
-  gathered from the Firefox dev tools.
-</p>
+Notes:
+badge: New, Updated

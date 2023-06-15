@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon";
 const { lazyLoading = false } = Astro.props;
 const {
-  imageSquare = "/images/project-placeholder.jpg",
+  image = "/images/project-placeholder.jpg",
   badge,
   title,
   tags,
@@ -16,7 +16,7 @@ const {
 <div class="blog-card">
   <a href={githubLink} class="img-link" target="_blank">
     <img
-      src={imageSquare}
+      src={image}
       alt=""
       class="img portfolio__img"
       loading={lazyLoading ? "lazy" : "eager"}
