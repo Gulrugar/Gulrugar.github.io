@@ -4,7 +4,7 @@ const { prevUrl, nextUrl, currentPage, lastPage, path } = Astro.props;
 const morePages = lastPage > 1;
 ---
 
-<nav>
+<nav class={!prevUrl && !nextUrl ? "padding-0" : ""}>
   <div>
     {
       prevUrl && (
@@ -49,6 +49,15 @@ const morePages = lastPage > 1;
     background: var(--clr-dark);
     padding: 20px 0;
   }
+
+  nav.padding-0 {
+    padding: 0;
+  }
+
+  nav:empty {
+    padding: 0;
+  }
+
   nav a,
   .page-numbers {
     margin-right: 5px;
