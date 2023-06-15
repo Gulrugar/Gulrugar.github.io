@@ -1,7 +1,7 @@
 ---
 order: 1
 title: Drew's Graphic Design Store
-image: /images/project-placeholder.jpg
+image: /images/projects/project-3/project-placeholder.jpg
 badge: New
 tags: ["HTML", "CSS", "Javascript", "Liquid"]
 storeLink: https://drews-dev-shop.myshopify.com
