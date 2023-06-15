@@ -285,7 +285,7 @@ h3 {
   position: fixed;
   width: 50px;
   height: 50px;
-  background: var(--clr-dark);
+  background: #212121;
   bottom: 40px;
   right: 0;
   text-decoration: none;
