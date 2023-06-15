@@ -142,4 +142,29 @@ import { Icon } from "astro-icon";
   .footer-copyright {
     color: #3a4554;
   }
+
+  @media screen and (max-width: 799px) {
+    .footer-info-wrapper {
+      flex-wrap: wrap;
+    }
+
+    .footer-info {
+      flex-basis: 100%;
+      order: 1;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .footer-info p {
+      margin-left: 0;
+    }
+
+    .footer-menu {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
 </style>
