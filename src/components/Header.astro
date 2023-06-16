@@ -9,7 +9,10 @@
       </a>
     </div>
     <nav class="desktop-menu">
-      <ul class="upper-menu">
+      <ul>
+        <li>
+          <a href="/projects" class="flow-animation">Projects</a>
+        </li>
         <li>
           <a href="/#services">My Services</a>
         </li>
@@ -23,17 +26,17 @@
           <a href="/#contact">Contact</a>
         </li>
       </ul>
-      <ul class="lower-menu">
-        <li>
-          <a href="/projects" class="flow-animation">Projects</a>
-        </li>
-      </ul>
     </nav>
     <button class="mobile-menu__toggle" aria-label="toggle navigation">
       <span class="hamburger"></span>
     </button>
     <nav class="mobile-menu">
       <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a href="/#services" class="mobile-menu__link flow-animation"
+            >Projects</a
+          >
+        </li>
         <li class="mobile-menu__item">
           <a href="/#services" class="mobile-menu__link">My Services</a>
         </li>
@@ -45,11 +48,6 @@
         </li>
         <li class="mobile-menu__item">
           <a href="/contact" class="mobile-menu__link">Contact</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a href="/projects" class="mobile-menu__link flow-animation"
-            >Projects</a
-          >
         </li>
       </ul>
     </nav>
@@ -82,7 +80,6 @@
 
   /* TM Header */
   .desktop-menu {
-    margin-right: 70px;
     font-weight: var(--fw-bold);
     font-size: 1.2rem;
     display: none;
@@ -90,18 +87,13 @@
 
   .desktop-menu ul {
     display: flex;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .desktop-menu ul li {
     margin-right: 1.2rem;
     padding-bottom: 2px;
-  }
-
-  .lower-menu {
-    margin: 0;
-    display: flex;
-    justify-content: center;
   }
 
   /* Header menu item bottom border */
@@ -163,7 +155,7 @@
   .mobile-menu__link {
     color: inherit;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
+    font-size: 1.5rem;
     text-decoration: none;
   }
 
@@ -249,6 +241,10 @@
   @media (min-width: 800px) {
     .desktop-menu {
       display: block;
+    }
+
+    .mobile-menu__toggle {
+      display: none;
     }
   }
 </style>
