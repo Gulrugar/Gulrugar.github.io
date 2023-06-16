@@ -15,7 +15,7 @@ const formattedProjects = formatProjects(projects, { limit: 6 });
     <a href="/projects" class="btn"
       >More Projects <Icon name="iconArrowRight" width="20" height="20" /></a
     >
-    <div class="project-styles page-width">
+    <div class="project-styles">
       {
         formattedProjects.map((project) => (
           <Card {project} lazyLoading={true} />
@@ -53,6 +53,8 @@ const formattedProjects = formatProjects(projects, { limit: 6 });
     grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
     place-items: center;
     gap: 3rem 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
   }
 
   /* Media Queries */

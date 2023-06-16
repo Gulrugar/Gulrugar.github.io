@@ -24,7 +24,7 @@ const path = "/projects";
     <div>
       <h2 class="section__title section__title--work">All Projects</h2>
       <p class="section__subtitle section__subtitle--work"></p>
-      <div class="project-styles page-width">
+      <div class="project-styles">
         {page.data.map((project) => <Card {project} lazyLoading={true} />)}
       </div>
     </div>
@@ -60,6 +60,8 @@ const path = "/projects";
     grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
     place-items: center;
     gap: 3rem 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
   }
 
   /* Media Queries */

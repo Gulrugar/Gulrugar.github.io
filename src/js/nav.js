@@ -1,21 +1,21 @@
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelectorAll(".nav__link");
-const nav = document.querySelector(".nav");
+const mobileToggle = document.querySelector(".mobile-menu__toggle");
+const mobileLinks = document.querySelectorAll(".mobile-menu__link");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 // new menu
 
-navToggle.addEventListener("click", () => {
-  document.body.classList.toggle("nav-open");
+mobileToggle.addEventListener("click", () => {
+  document.body.classList.toggle("mobile-open");
   document.body.classList.toggle("stop-scrolling");
 });
 
-navLinks.forEach((link) => {
+mobileLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    document.body.classList.remove("nav-open");
+    document.body.classList.remove("mobile-open");
     document.body.classList.remove("stop-scrolling");
   });
 });
 
 window.onload = () => {
-  nav.style.display = "block";
+  mobileMenu.style.display = "block";
 };

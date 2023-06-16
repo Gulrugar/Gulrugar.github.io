@@ -145,134 +145,23 @@ h3 {
   margin-bottom: 1em;
 }
 
-/* header */
-
-.main-header {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.main-header > div {
-  display: flex;
-  position: relative;
-  top: 0;
-  left: 0;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  padding: 0 30px;
-  max-width: 1188px;
-}
-
-.logo {
-  max-width: 178px;
-}
-
-.nav {
-  position: fixed;
-  background: var(--clr-dark);
-  color: var(--clr-light);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  display: none;
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-.nav__list {
-  list-style: none;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav__link {
-  color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h3);
-  text-decoration: none;
-}
-
-.nav__link:hover {
-  color: var(--clr-accent);
-}
-
-.nav-toggle {
-  padding: 0.5em;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  position: absolute;
-  right: 2.25rem;
-  top: 2.25rem;
-  z-index: 1000;
-}
-
-.nav-open .nav {
+/* Mobile Menu Open */
+.mobile-open .mobile-menu {
   transform: translateX(0);
 }
 
-.nav-open .hamburger {
+.mobile-open .hamburger {
   transform: rotate(0.625turn);
   background: var(--clr-light);
 }
 
-.nav-open .hamburger::before {
+.mobile-open .hamburger::before {
   transform: rotate(90deg) translateX(-6px);
   background: var(--clr-light);
 }
 
-.nav-open .hamburger::after {
+.mobile-open .hamburger::after {
   opacity: 0;
-}
-
-/* Hamburger */
-
-.hamburger {
-  display: block;
-  position: relative;
-}
-
-.hamburger,
-.hamburger::before,
-.hamburger::after {
-  background: var(--clr-dark);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
-
-.hamburger::before,
-.hamburger::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.hamburger::before {
-  top: 6px;
-}
-.hamburger::after {
-  bottom: 6px;
-}
-
-/* T.M. Nav Setup: Overlay */
-.overlay-show {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
 }
 
 .stop-scrolling {
@@ -295,76 +184,9 @@ h3 {
   z-index: 3;
 }
 
-/* TM Header and side menu */
-.desktop-main-menu {
-  margin-right: 70px;
-  font-weight: var(--fw-bold);
-  font-size: 1.2rem;
-  display: none;
-}
-
-.desktop-main-menu ul {
-  display: flex;
-  margin-bottom: 0;
-}
-
-.lower-menu {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.desktop-main-menu ul li {
-  position: relative;
-  margin-right: 1.2rem;
-  padding-bottom: 2px;
-}
-
-/* Header menu item bottom border */
-.desktop-main-menu ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--clr-accent);
-  transform: scaleX(0);
-  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.desktop-main-menu ul li a:hover::after {
-  transform: scaleX(1);
-}
-
-.desktop-main-menu ul {
-  list-style: none;
-}
-
-.desktop-main-menu ul li a {
-  text-decoration: none;
-  color: var(--clr-dark);
-}
-
-@media (min-width: 800px) {
-  .desktop-main-menu {
-    display: block;
-  }
-}
-
-/* my styles */
-.page-width {
-  max-width: 1500px;
-  margin: 0 auto;
-}
-
-/* Tailwind Style Classes */
-.underline {
-  text-decoration: underline;
-}
-
 /* Logo Wiggle Animation */
-.logo.animation:hover {
+
+.animation:hover {
   animation: wiggle 1s ease-in-out infinite;
 }
 
