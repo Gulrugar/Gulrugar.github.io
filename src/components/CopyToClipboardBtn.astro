@@ -1,0 +1,88 @@
+---
+const { storePassword } = Astro.props;
+---
+
+<div class="wrapper">
+  <div class="label">Store Password:</div>
+  <div class="text-container">
+    <input type="text" readonly value={storePassword} />
+    <button>
+      <i class="fa fa-clone"></i>
+    </button>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    padding: 5px 0;
+    display: inline-block;
+  }
+
+  .text-container {
+    position: relative;
+    padding: 5px;
+    background: var(--clr-light);
+    border-radius: 5px;
+    display: flex;
+  }
+
+  .text-container input {
+    padding: 5px;
+    color: var(--clr-dark);
+    border: none;
+    outline: none;
+  }
+
+  .text-container button {
+    padding: 5px;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .text-container button:active {
+    background: var(--clr-accent-light);
+  }
+
+  .text-container button::before {
+    content: "Copied!";
+    position: absolute;
+    top: -38px;
+    right: 0;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    padding: 4px 5px;
+    border-radius: 15px;
+    display: none;
+  }
+
+  .text-container button::after {
+    content: "";
+    position: absolute;
+    top: -16px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr-accent);
+    transform: rotate(45deg);
+    display: none;
+  }
+
+  .text-container.active button::before,
+  .text-container.active button::after {
+    display: block;
+  }
+</style>
+
+<script>
+  import "../js/clipboard-copy.js";
+</script>

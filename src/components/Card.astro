@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon";
+import CopyToClipboardBtn from "./CopyToClipboardBtn.astro";
 const { lazyLoading = false } = Astro.props;
 const {
   image = "/images/project-placeholder.jpg",
@@ -51,13 +52,10 @@ const {
       {tags && tags.map((tag) => <li class="tag">{tag}</li>)}
     </ul>
   </div>
-  <div class="password">
-    Store Password:
-    <strong>{storePassword}</strong>
-  </div>
+  <CopyToClipboardBtn {storePassword} />
   <ul class="utility-list">
-    <a href={githubLink} class="btn" target="_blank">Github Repo</a>
     <a href={storeLink} class="btn" target="_blank">View Store</a>
+    <a href={githubLink} class="btn" target="_blank">Github Repo</a>
   </ul>
 </div>
 
