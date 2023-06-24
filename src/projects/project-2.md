@@ -1,7 +1,7 @@
 ---
 order: 2
 title: Drew's Youtube Merch
-image: /images/projects/project-2/drews-youtube-merch-600x600.webp
+image: /images/projects/project-2/drews-youtube-merch.webp
 badge:
 tags: ["HTML", "CSS", "Javascript", "Liquid"]
 storeLink: https://drews-youtube-merch.myshopify.com

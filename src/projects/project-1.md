@@ -1,7 +1,7 @@
 ---
 order: 3
 title: Drew's Flower Shop
-image: /images/projects/project-1/drews-flowershop-600x600.webp
+image: /images/projects/project-1/drews-flowershop.webp
 badge:
 tags: ["HTML", "CSS", "Javascript", "Liquid"]
 storeLink: http://drews-flowershop.myshopify.com
