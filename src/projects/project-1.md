@@ -3,7 +3,13 @@ order: 3
 title: Drew's Flower Shop
 image: /images/projects/project-1/drews-flowershop.webp
 badge:
-tags: ["HTML", "CSS", "Javascript", "Liquid"]
+tags:
+  [
+    { name: "HTML", color: "#f45151" },
+    { name: "CSS", color: "#51f4df" },
+    { name: "Javascript", color: "#faba32" },
+    { name: "Liquid", color: "#7f79fd" },
+  ]
 storeLink: http://drews-flowershop.myshopify.com
 storePassword: devdrew
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
