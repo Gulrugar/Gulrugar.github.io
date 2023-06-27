@@ -10,7 +10,9 @@ tags:
     { name: "Javascript", color: "#faba32" },
     { name: "Liquid", color: "#7f79fd" },
   ]
-storeLink: http://drews-flowershop.myshopify.com
+type: Store
+link: http://drews-flowershop.myshopify.com
+passwordProtected: true
 storePassword: devdrew
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
 shortIntro: A Shopify store that specializes in selling flowers for various occasions

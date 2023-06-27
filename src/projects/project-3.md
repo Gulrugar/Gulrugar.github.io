@@ -11,7 +11,9 @@ tags:
     { name: "Liquid", color: "#7f79fd" },
     { name: "Photoshop", color: "#fd79fb" },
   ]
-storeLink: https://drews-dev-shop.myshopify.com
+type: Store
+link: https://drews-dev-shop.myshopify.com
+passwordProtected: true
 storePassword: devdrew
 githubLink: https://github.com/Gulrugar/Drews-Dev-Shop
 shortIntro: A customized version of Dawn that sells merchandise with graphic designs

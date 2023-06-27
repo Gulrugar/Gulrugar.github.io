@@ -10,7 +10,9 @@ tags:
     { name: "Javascript", color: "#faba32" },
     { name: "Liquid", color: "#7f79fd" },
   ]
-storeLink: https://drews-youtube-merch.myshopify.com
+type: Store
+link: https://drews-youtube-merch.myshopify.com
+passwordProtected: true
 storePassword: devdrew
 githubLink: https://github.com/Gulrugar/Game-Grumps-Merch-Clone
 shortIntro: A Shopify store for selling T-Shirts and other branded merchandise

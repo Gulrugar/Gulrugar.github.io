@@ -7,7 +7,9 @@ const {
   badge,
   title,
   tags,
-  storeLink,
+  type,
+  passwordProtected,
+  link,
   githubLink,
   shortIntro,
   storePassword,
@@ -52,20 +54,27 @@ const {
       {
         tags &&
           tags.map((tag) => (
-            <span class="tag" style={`color: ${tag.color}`}>
+            <span
+              class="tag"
+              style={`color: ${tag.color}; ${
+                passwordProtected ? "" : "margin-bottom: 20px"
+              }`}
+            >
               {tag.name}
             </span>
           ))
       }
     </div>
   </div>
-  <CopyToClipboardBtn {storePassword} />
+
+  {passwordProtected && <CopyToClipboardBtn {storePassword} />}
+
   <ul class="utility-list">
-    <a href={storeLink} class="btn" target="_blank"
-      >View Store <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+    <a href={link} class="btn" target="_blank"
+      >View {type} <i class="fa-solid fa-arrow-up-right-from-square"></i></a
     >
     <a href={githubLink} class="btn" target="_blank"
-      >Store Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+      >{type} Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a
     >
   </ul>
 </div>
