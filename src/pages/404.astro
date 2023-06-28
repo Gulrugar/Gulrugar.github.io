@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "astro-icon";
+---
+
+<Layout title="Drew's Portfolio">
+  <div class="template-404">
+    <h1>404</h1>
+    <p>Page not found</p>
+    <a href="/" class="btn"
+      >Back to Homepage <Icon name="iconArrowRight" width="20" height="20" /></a
+    >
+  </div>
+</Layout>
+
+<style>
+  .template-404 {
+    text-align: center;
+    margin: 7rem auto;
+    max-width: 1188px;
+    padding: 0 1.5rem;
+  }
+
+  .btn svg {
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+</style>
