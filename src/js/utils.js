@@ -3,7 +3,7 @@ export function formatProjects(
   { sortByOrder = true, limit = undefined } = {}
 ) {
   if (sortByOrder) {
-    projects.sort((a, b) => a.frontmatter.order - b.frontmatter.order);
+    projects.sort((a, b) => b.frontmatter.order - a.frontmatter.order);
   } else {
     projects.sort(() => Math.random() - 0.5);
   }

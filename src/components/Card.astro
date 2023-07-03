@@ -56,11 +56,11 @@ const {
           tags.map((tag) => (
             <span
               class="tag"
-              style={`color: ${tag.color}; ${
+              style={`color: var(--tags-${tag}, transparent); ${
                 passwordProtected ? "" : "margin-bottom: 20px"
               }`}
             >
-              {tag.name}
+              {tag}
             </span>
           ))
       }

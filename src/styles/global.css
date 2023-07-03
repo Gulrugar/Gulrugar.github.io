@@ -30,6 +30,13 @@
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
+  --tags-HTML: #f45151;
+  --tags-CSS: #51f4df;
+  --tags-Javascript: #faba32;
+  --tags-Liquid: #7f79fd;
+  --tags-Photoshop: #fd79fb;
+  --tags-Shopify: #79fd7f;
+
   /* this applies multiple box shadows */
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);

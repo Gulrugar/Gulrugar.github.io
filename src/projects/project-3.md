@@ -1,16 +1,9 @@
 ---
-order: 1
+order: 3
 title: Drew's Dev Shop
 image: /images/projects/project-3/drews-dev-shop.webp
 badge: New
-tags:
-  [
-    { name: "HTML", color: "#f45151" },
-    { name: "CSS", color: "#51f4df" },
-    { name: "Javascript", color: "#faba32" },
-    { name: "Liquid", color: "#7f79fd" },
-    { name: "Photoshop", color: "#fd79fb" },
-  ]
+tags: [Shopify, HTML, CSS, Javascript, Liquid, Photoshop]
 type: Store
 link: https://drews-dev-shop.myshopify.com
 passwordProtected: true

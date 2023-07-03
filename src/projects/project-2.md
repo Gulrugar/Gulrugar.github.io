@@ -3,13 +3,7 @@ order: 2
 title: Drew's Youtube Merch
 image: /images/projects/project-2/drews-youtube-merch.webp
 badge:
-tags:
-  [
-    { name: "HTML", color: "#f45151" },
-    { name: "CSS", color: "#51f4df" },
-    { name: "Javascript", color: "#faba32" },
-    { name: "Liquid", color: "#7f79fd" },
-  ]
+tags: [Shopify, HTML, CSS, Javascript, Liquid]
 type: Store
 link: https://drews-youtube-merch.myshopify.com
 passwordProtected: true
