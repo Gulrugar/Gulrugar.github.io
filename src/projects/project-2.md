@@ -1,5 +1,6 @@
 ---
 order: 2
+show_on_frontpage: true
 title: Drew's Youtube Merch
 image: /images/projects/project-2/drews-youtube-merch.webp
 badge:

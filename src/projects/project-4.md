@@ -1,5 +1,6 @@
 ---
 order: 4
+show_on_frontpage: true
 title: LA Mountains
 image: /images/projects/project-4/la-mountains.webp
 badge: New

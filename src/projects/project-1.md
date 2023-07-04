@@ -1,5 +1,6 @@
 ---
 order: 1
+show_on_frontpage: true
 title: Drew's Flower Shop
 image: /images/projects/project-1/drews-flowershop.webp
 badge:

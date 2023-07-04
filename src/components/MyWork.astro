@@ -3,7 +3,9 @@ import Card from "./Card.astro";
 import { Icon } from "astro-icon";
 import { formatProjects } from "../js/utils.js";
 
-const projects = await Astro.glob("../projects/*.md");
+let projects = await Astro.glob("../projects/*.md");
+// Filter out projects that are not shown on the frontpage
+projects = projects.filter((project) => project.frontmatter.show_on_frontpage);
 const formattedProjects = formatProjects(projects, { limit: 6 });
 ---
 
