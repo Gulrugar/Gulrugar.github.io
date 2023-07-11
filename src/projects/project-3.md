@@ -3,7 +3,7 @@ order: 3
 show_on_frontpage: true
 title: Drew's Dev Shop
 image: /images/projects/project-3/drews-dev-shop.webp
-badge: New
+badge:
 tags: [Shopify, HTML, CSS, Javascript, Liquid, Photoshop]
 type: Store
 link: https://drews-dev-shop.myshopify.com

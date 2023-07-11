@@ -50,16 +50,16 @@ const {
     {shortIntro}
   </p>
   <div>
-    <div class="tag-list">
+    <div
+      class="tag-list"
+      style=`${
+      passwordProtected ? "" : "margin-bottom: 20px"
+    }`
+    >
       {
         tags &&
           tags.map((tag) => (
-            <span
-              class="tag"
-              style={`color: var(--tags-${tag}, transparent); ${
-                passwordProtected ? "" : "margin-bottom: 20px"
-              }`}
-            >
+            <span class="tag" style={`color: var(--tags-${tag}, transparent);`}>
               {tag}
             </span>
           ))

@@ -4,7 +4,7 @@ show_on_frontpage: true
 title: LA Mountains
 image: /images/projects/project-4/la-mountains.webp
 badge: New
-tags: [Design2Web, HTML, CSS, Javascript]
+tags: [HTML, CSS, Javascript]
 type: Project
 link: https://la-mountains.netlify.app/
 passwordProtected: false

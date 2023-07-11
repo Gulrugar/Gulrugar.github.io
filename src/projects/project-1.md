@@ -6,7 +6,7 @@ image: /images/projects/project-1/drews-flowershop.webp
 badge:
 tags: [Shopify, HTML, CSS, Javascript, Liquid]
 type: Store
-link: http://drews-flowershop.myshopify.com
+link: https://drews-flowershop.myshopify.com
 passwordProtected: true
 storePassword: devdrew
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
