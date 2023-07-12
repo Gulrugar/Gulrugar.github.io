@@ -4,7 +4,7 @@ show_on_frontpage: true
 title: Drew's Youtube Merch
 image: /images/projects/project-2/drews-youtube-merch.webp
 badge:
-tags: [Shopify, HTML, CSS, Javascript, Liquid]
+tags: [Shopify, HTML, CSS, Javascript, Liquid, Tailwind]
 type: Store
 link: https://drews-youtube-merch.myshopify.com
 passwordProtected: true

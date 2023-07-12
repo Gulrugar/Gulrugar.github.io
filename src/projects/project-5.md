@@ -4,7 +4,7 @@ show_on_frontpage: true
 title: CarHub
 image: /images/projects/project-5/carhub-project-image.webp
 badge: New
-tags: [Next, React, HTML, CSS, Typescript, RapidAPI]
+tags: [Next, React, HTML, CSS, Typescript, RapidAPI, Tailwind]
 type: Project
 link: https://car-showcase-vji2.vercel.app
 passwordProtected: false
