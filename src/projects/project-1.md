@@ -10,7 +10,7 @@ link: https://drews-flowershop.myshopify.com
 passwordProtected: true
 storePassword: devdrew
 githubLink: http://github.com/Gulrugar/DrewsFlowerShop
-shortIntro: A Shopify store that specializes in selling flowers for various occasions
+shortIntro: A Shopify store that specializes in selling flowers for various occasions.
 ---
 
 Notes:
