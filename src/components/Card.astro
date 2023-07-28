@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon";
 import CopyToClipboardBtn from "./CopyToClipboardBtn.astro";
 const { lazyLoading = false } = Astro.props;
 const {
@@ -43,7 +42,9 @@ const {
   </a>
 
   <div class="title-content">
-    <h3 class="h3">{title}</h3>
+    <a href={link} target="_blank" class="scale-on-hover">
+      <h3 class="h3">{title}</h3>
+    </a>
     <hr class="hr" />
   </div>
   <p class="card-info">
@@ -197,6 +198,10 @@ const {
 
   .btn:hover {
     transform: scale(1.05);
+  }
+
+  .scale-on-hover:hover h3 {
+    text-decoration: underline;
   }
 
   @media screen and (min-width: 416px) {
