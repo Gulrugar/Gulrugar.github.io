@@ -2,7 +2,7 @@
 order: 8
 show_on_frontpage: true
 title: Netflix
-image: /images/projects/project-8/netflix-clone-project-image.webp
+image: /images/projects/project-8/netflix-clone-project-image-1.webp
 badge: New
 tags: [Next, React, TailwindCSS, Typescript, MongoDB, OAuth]
 type: Project
