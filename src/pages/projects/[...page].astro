@@ -9,7 +9,7 @@ export async function getStaticPaths({ paginate }) {
   const formattedProjects = formatProjects(allPosts);
 
   return paginate(formattedProjects, {
-    pageSize: 6,
+    pageSize: 10,
   });
 }
 
@@ -23,6 +23,7 @@ const path = "/projects";
   <section class="my-work">
     <div>
       <h2 class="section__title section__title--work">All Projects</h2>
+      <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} {path} />
       <p class="section__subtitle section__subtitle--work"></p>
       <div class="project-styles">
         {page.data.map((project) => <Card {project} lazyLoading={true} />)}

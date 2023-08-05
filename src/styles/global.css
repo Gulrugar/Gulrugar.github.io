@@ -44,6 +44,7 @@
   --tags-GraphQL: #e535ab;
   --tags-OAuth: #fff;
   --tags-Prisma: #71e8df;
+  --tags-MongoDB: #0ca200;
 
   /* this applies multiple box shadows */
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),

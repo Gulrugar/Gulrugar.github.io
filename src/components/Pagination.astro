@@ -23,7 +23,7 @@ const morePages = lastPage > 1;
                 href={
                   currentPage == pageNumber
                     ? ""
-                    : `/${path}/${pageNumber == 1 ? "" : pageNumber}`
+                    : `${path}/${pageNumber == 1 ? "" : pageNumber}`
                 }
               >
                 {pageNumber}
