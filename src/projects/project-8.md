@@ -10,7 +10,7 @@ link: https://netflix-next13-one.vercel.app
 passwordProtected: false
 storePassword: none
 githubLink: https://github.com/Gulrugar/Netflix-Next13
-shortIntro: A Netflix clone built with Nextjs 13 that features favoriting videos and open authentication (OAuth) with Google and Github.
+shortIntro: A Netflix clone built with Nextjs 13 that features favoriting videos and OAuth with Google and Github.
 ---
 
 Notes:
