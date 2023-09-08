@@ -3,7 +3,7 @@ order: 7
 show_on_frontpage: true
 title: Breadit
 image: /images/projects/project-7/breadit-project-image.webp
-badge: New
+badge:
 tags: [Next, React, TailwindCSS, Typescript, Prisma, OAuth]
 type: Project
 link: https://breadit-six-tawny.vercel.app

@@ -24,19 +24,15 @@ const {
       loading={lazyLoading ? "lazy" : "eager"}
     />
     {
-      badge == "New" ? (
+      badge === "New" && (
         <p class="portfolio__item-badge portfolio__item-badge--new">
           &#9734; New &#9734;
         </p>
-      ) : (
-        ""
       )
     }
     {
-      badge == "Updated" ? (
-        <p class="portfolio__item-badge">&#9734; Updated &#9734;</p>
-      ) : (
-        ""
+      (badge === "Updated" || badge === "In Progress") && (
+        <p class="portfolio__item-badge">&#9734; {badge} &#9734;</p>
       )
     }
   </a>
@@ -74,9 +70,13 @@ const {
     <a href={link} class="btn" target="_blank"
       >View {type} <i class="fa-solid fa-arrow-up-right-from-square"></i></a
     >
-    <a href={githubLink} class="btn" target="_blank"
-      >{type} Preview <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-    >
+    {
+      githubLink.length > 0 && (
+        <a href={githubLink} class="btn" target="_blank">
+          {type} Preview <i class="fa-solid fa-arrow-up-right-from-square" />
+        </a>
+      )
+    }
   </ul>
 </div>
 
