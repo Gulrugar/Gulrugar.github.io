@@ -2,6 +2,7 @@
 order: 3
 show_on_frontpage: true
 title: Drew's Dev Shop
+mainTech: Shopify
 image: /images/projects/project-3/drews-dev-shop.webp
 badge:
 tags: [Shopify, HTML, CSS, Javascript, Liquid, Photoshop]

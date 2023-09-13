@@ -2,6 +2,7 @@
 order: 9
 show_on_frontpage: true
 title: Threads
+mainTech: Next
 image: /images/projects/project-9/threads-project-image.webp
 badge: New
 tags: [Next, React, TailwindCSS, Typescript, MongoDB, OAuth]

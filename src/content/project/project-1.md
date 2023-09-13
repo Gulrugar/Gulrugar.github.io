@@ -2,6 +2,7 @@
 order: 1
 show_on_frontpage: true
 title: Drew's Flower Shop
+mainTech: Shopify
 image: /images/projects/project-1/drews-flowershop.webp
 badge:
 tags: [Shopify, HTML, CSS, Javascript, Liquid]

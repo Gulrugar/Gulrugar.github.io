@@ -2,6 +2,7 @@
 order: 7
 show_on_frontpage: true
 title: Breadit
+mainTech: Next
 image: /images/projects/project-7/breadit-project-image.webp
 badge:
 tags: [Next, React, TailwindCSS, Typescript, Prisma, OAuth]

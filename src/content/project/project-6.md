@@ -2,6 +2,7 @@
 order: 6
 show_on_frontpage: true
 title: Flexibble
+mainTech: Next
 image: /images/projects/project-6/flexibble-project-image.webp
 badge:
 tags: [Next, React, TailwindCSS, Typescript, GraphQL, OAuth]

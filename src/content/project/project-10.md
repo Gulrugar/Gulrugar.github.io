@@ -2,6 +2,7 @@
 order: 10
 show_on_frontpage: true
 title: Mythology Blog
+mainTech: Astro
 image: /images/projects/project-10/project-10.webp
 badge: In Progress
 tags: [Astro, GoogleAdSense, HTML, CSS, Typescript]

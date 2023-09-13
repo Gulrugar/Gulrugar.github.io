@@ -2,6 +2,7 @@
 order: 2
 show_on_frontpage: true
 title: Drew's Youtube Merch
+mainTech: Shopify
 image: /images/projects/project-2/drews-youtube-merch.webp
 badge:
 tags: [Shopify, HTML, TailwindCSS, Javascript, Liquid]

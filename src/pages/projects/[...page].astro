@@ -1,21 +1,42 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Pagination from "../../components/Pagination.astro";
-import Card from "../../components/Card.astro";
+import NewCard from "../../components/NewCard.astro";
+import { getCollection, CollectionEntry } from "astro:content";
 import { formatProjects } from "../../js/utils.js";
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob("../../projects/*.md");
-  const formattedProjects = formatProjects(allPosts);
+  const projects = await getCollection("project");
+  const formattedProjects = formatProjects(projects);
 
   return paginate(formattedProjects, {
-    pageSize: 10,
+    pageSize: 40,
   });
 }
 
-const { page } = Astro.props;
-const { prev: prevUrl, next: nextUrl } = page.url;
-const { currentPage, lastPage } = page;
+type Props = {
+  page?: {
+    data: CollectionEntry<"project">[];
+    start: number;
+    end: number;
+    size: number;
+    total: number;
+    currentPage: number;
+    lastPage: number;
+    url: {
+      current: string | undefined;
+      next: string | undefined;
+      prev: string | undefined;
+    };
+  };
+};
+
+const { page } = Astro.props as Props;
+const {
+  url: { prev: prevUrl, next: nextUrl },
+  currentPage,
+  lastPage,
+} = page;
 const path = "/projects";
 ---
 
@@ -26,7 +47,7 @@ const path = "/projects";
       <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} {path} />
       <p class="section__subtitle section__subtitle--work"></p>
       <div class="project-styles">
-        {page.data.map((project) => <Card {project} lazyLoading={true} />)}
+        {page.data.map((project) => <NewCard {project} lazyLoading={true} />)}
       </div>
     </div>
   </section>
