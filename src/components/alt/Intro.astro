@@ -1,0 +1,286 @@
+---
+import { Icon } from "astro-icon";
+
+const heroImage =
+  "images/Intro/profile_picture_final_square_1080x1080_full.webp";
+---
+
+<section class="section-padding">
+  <div class="row">
+    <div class="col-narrow stack">
+      <div>
+        <h3>My Stack: T3</h3>
+        <ul>
+          <li>
+            <span>React</span>
+            <span class="icon-container">
+              <Icon name="iconReact" width="60" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Next</span>
+            <span class="icon-container">
+              <Icon name="iconNext" width="60" height="50" />
+            </span>
+          </li>
+
+          <li>
+            <span>Typescript</span>
+            <span class="icon-container">
+              <Icon name="iconTypescript" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Tailwind CSS</span>
+            <span class="icon-container">
+              <Icon name="iconTailwindCSS" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>tRPC</span>
+            <span class="icon-container">
+              <Icon name="iconTRPC" width="50" height="50" />
+            </span>
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Databases</h3>
+        <ul>
+          <li>
+            <span>Mongo DB</span>
+            <span class="icon-container">
+              <Icon name="iconMongo" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>MySQL</span>
+            <span class="icon-container">
+              <Icon name="iconMySQL" width="60" height="50" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-large details">
+      <div>
+        <h1 class="main-page-title page-title">Andrew Aguirre</h1>
+        <div class="rte">
+          <p>
+            Web Developer looking for a remote position with a great work
+            environment that's all about helping each other grow
+          </p>
+        </div>
+        <a href={heroImage} class="intro__img">
+          <img src={heroImage} alt="a picture of Drew" />
+        </a>
+        <div class="hero-btn-wrapper">
+          <a href="#work" class="btn">My Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-narrow specialty">
+      <div>
+        <h3>Specialty</h3>
+        <ul>
+          <li>
+            <span>Shopify Platform</span>
+            <span class="icon-container">
+              <Icon name="iconShopify" width="50" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Shopify Liquid</span>
+            <span>
+              <img
+                class="icon-shopify-liquid"
+                src="images/Intro/iconLiquid-w60.png"
+                alt="liquid icon"
+              />
+            </span>
+          </li>
+          <li>
+            <span>HTML, CSS, Javascript</span>
+            <span class="flex">
+              <span class="icon-container mr-5">
+                <Icon name="iconHTML" width="50" height="50" />
+              </span>
+              <span class="icon-container mr-5">
+                <Icon name="iconCSS" width="50" height="50" />
+              </span>
+              <span class="icon-container">
+                <Icon name="iconJavascript" width="50" height="50" />
+              </span>
+            </span>
+          </li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Other</h3>
+        <ul>
+          <li>
+            <span>Blogs</span>
+            <span>w/ Astro</span>
+            <span class="icon-container">
+              <Icon name="iconAstro" width="60" height="50" />
+            </span>
+          </li>
+          <li>
+            <span>Design & Layout</span>
+            <span>w/ Figma</span>
+            <span class="icon-container">
+              <Icon name="iconFigma" width="50" height="50" />
+            </span>
+            <span style="text-decoration: underline;">Image Manipulation</span>
+            <span>w/ Photoshop</span>
+            <span class="icon-container">
+              <Icon name="iconPhotoshop" width="50" height="50" />
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .row {
+    max-width: 1188px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "stack details specialty";
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+
+  .stack {
+    grid-area: stack;
+  }
+
+  .details {
+    grid-area: details;
+    display: flex;
+    justify-content: center;
+  }
+
+  .details > div {
+    max-width: 600px;
+  }
+
+  .specialty {
+    grid-area: specialty;
+  }
+
+  .section-padding {
+    padding-top: 0;
+    padding-bottom: 36px;
+  }
+
+  .main-page-title {
+    margin-bottom: 3rem;
+  }
+
+  .page-title {
+    margin-top: 0;
+  }
+
+  .rte p {
+    font-size: 1.2rem;
+  }
+
+  .col-narrow,
+  .col-large {
+    padding-top: 36px;
+  }
+
+  .col-narrow > div {
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .col-narrow h3 {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  li span:first-child {
+    text-decoration: underline;
+  }
+
+  /* individual styles */
+  .flex {
+    display: flex;
+  }
+
+  .mr-5 {
+    margin-right: 5px;
+  }
+
+  .mr-10 {
+    margin-right: 10px;
+  }
+
+  /* Custom Elements START */
+
+  .divider {
+    width: 90%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    margin: 15px 0;
+  }
+
+  .hero-btn-wrapper {
+    display: flex;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+
+  .hero-btn-wrapper .btn {
+    font-size: 1rem;
+  }
+  /* Icons START */
+
+  .icon-container {
+    display: flex;
+    padding-top: 5px;
+  }
+
+  .icon-shopify-liquid {
+    width: 60px;
+    padding-top: 5px;
+  }
+
+  /* Icons END */
+
+  /* Media Queries */
+
+  @media screen and (max-width: 849px) {
+    .row {
+      flex-direction: column;
+      display: grid;
+      grid-template-areas: "details details" "stack specialty";
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .col-narrow > div {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 1099px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+</style>
