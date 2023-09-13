@@ -1,0 +1,76 @@
+---
+import Card from "./Card.astro";
+import { Icon } from "astro-icon";
+import { formatProjects } from "../../js/utils.js";
+
+let projects = await Astro.glob("../projects/*.md");
+// Filter out projects that are not shown on the frontpage
+projects = projects.filter((project) => project.frontmatter.show_on_frontpage);
+const formattedProjects = formatProjects(projects, { limit: 6 });
+---
+
+<!-- My Work -->
+<section class="my-work" id="work">
+  <div>
+    <h2 class="section__title section__title--work">My work</h2>
+    <p class="section__subtitle section__subtitle--work">Checkout my stores</p>
+    <a href="/projects" class="btn"
+      >More Projects <Icon name="iconArrowRight" width="20" height="20" /></a
+    >
+    <div class="project-styles">
+      {
+        formattedProjects.map((project) => (
+          <Card {project} lazyLoading={true} />
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .my-work {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+  }
+
+  .section__subtitle--work {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1em;
+  }
+
+  .btn {
+    margin-bottom: 4em;
+  }
+
+  .btn svg {
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+
+  .project-styles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
+    place-items: center;
+    gap: 3rem 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  /* Media Queries */
+
+  @media screen and (min-width: 416px) {
+    .project-styles {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    section.my-work {
+      padding: 2em 2em;
+    }
+  }
+</style>

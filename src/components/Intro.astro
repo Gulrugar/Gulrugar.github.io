@@ -270,6 +270,12 @@ import { Icon } from "astro-icon";
     margin-top: 2em;
   }
 
+  @media (max-width: 900px) {
+    .skills {
+      flex-direction: column;
+    }
+  }
+
   /* h3 */
   .skills h3 {
     border-right: 2px solid rgba(45, 46, 50, 0.5);
@@ -278,6 +284,15 @@ import { Icon } from "astro-icon";
     margin-right: 1.25rem;
     padding-right: 1.25rem;
     align-self: center;
+  }
+
+  @media (max-width: 900px) {
+    .skills h3 {
+      border-right: none;
+      border-bottom: 2px solid rgba(45, 46, 50, 0.5);
+      margin: 0;
+      padding: 0;
+    }
   }
 
   /* div class="logos" */

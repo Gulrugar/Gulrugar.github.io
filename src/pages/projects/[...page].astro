@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Pagination from "../../components/Pagination.astro";
-import NewCard from "../../components/NewCard.astro";
+import Card from "../../components/Card.astro";
 import { getCollection, CollectionEntry } from "astro:content";
 import { formatProjects } from "../../js/utils.js";
 
@@ -42,12 +42,12 @@ const path = "/projects";
 
 <Layout title="Projects">
   <section class="my-work">
-    <div>
+    <div class="page-width">
       <h2 class="section__title section__title--work">All Projects</h2>
       <Pagination {prevUrl} {nextUrl} {currentPage} {lastPage} {path} />
       <p class="section__subtitle section__subtitle--work"></p>
-      <div class="project-styles">
-        {page.data.map((project) => <NewCard {project} lazyLoading={true} />)}
+      <div class="projects-grid">
+        {page.data.map((project) => <Card {project} lazyLoading={true} />)}
       </div>
     </div>
   </section>
@@ -55,44 +55,59 @@ const path = "/projects";
 </Layout>
 
 <style>
+  /* section class="my-work page-width" id="work" */
   .my-work {
-    padding-left: 0;
-    padding-right: 0;
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
   }
 
+  /* h2 class="section__title section__title--work" */
+
   .section__subtitle--work {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
+  /* a class="btn" */
   .btn {
     margin-bottom: 4em;
   }
 
+  /* svg */
+
   .btn svg {
     vertical-align: middle;
+    transform: translateY(-1px);
   }
 
-  .project-styles {
+  /* div class="projects-grid" */
+  .projects-grid {
+    margin-top: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(344px, 1fr));
-    place-items: center;
-    gap: 3rem 2rem;
-    max-width: 1500px;
-    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1280px) {
+    .projects-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   /* Media Queries */
-
-  @media screen and (min-width: 416px) {
-    .project-styles {
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    }
-  }
 
   @media screen and (min-width: 550px) {
     section.my-work {

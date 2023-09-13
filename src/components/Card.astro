@@ -1,98 +1,126 @@
 ---
-import CopyToClipboardBtn from "./CopyToClipboardBtn.astro";
-const { lazyLoading = false } = Astro.props;
-const {
-  image = "/images/project-placeholder.jpg",
-  badge,
-  title,
-  tags,
-  type,
-  passwordProtected,
-  link,
-  githubLink,
-  shortIntro,
-  storePassword,
-} = Astro.props.project.frontmatter;
+import { type CollectionEntry } from "astro:content";
+import Icon from "astro-icon";
+
+type Props = {
+  project: CollectionEntry<"project">;
+  lazyLoading?: boolean;
+};
+
+const { project, lazyLoading = false } = Astro.props as Props;
+const { image, badge, mainTech, title } = project.data;
 ---
 
-<div class="blog-card">
-  <a href={link} class="img-link" target="_blank">
-    <img
-      src={image}
-      alt=""
-      class="img portfolio__img"
-      loading={lazyLoading ? "lazy" : "eager"}
-    />
-    {
-      badge === "New" && (
-        <p class="portfolio__item-badge portfolio__item-badge--new">
-          &#9734; New &#9734;
-        </p>
-      )
-    }
-    {
-      (badge === "Updated" || badge === "In Progress") && (
-        <p class="portfolio__item-badge">&#9734; {badge} &#9734;</p>
-      )
-    }
-  </a>
-
-  <div class="title-content">
-    <a href={link} target="_blank" class="scale-on-hover">
-      <h3 class="h3">{title}</h3>
-    </a>
-    <hr class="hr" />
-  </div>
-  <p class="card-info">
-    {shortIntro}
-  </p>
-  <div>
-    <div
-      class="tag-list"
-      style=`${
-      passwordProtected ? "" : "margin-bottom: 20px"
-    }`
-    >
+<div class="card">
+  <a href={`/project/${project.slug}`} class="card__link">
+    <div class="card__image-wrapper">
+      <img
+        src={image}
+        alt="project card"
+        class="card__image"
+        loading={lazyLoading ? "lazy" : "eager"}
+      />
+    </div>
+    <div class="card__badge">
       {
-        tags &&
-          tags.map((tag) => (
-            <span class="tag" style={`color: var(--tags-${tag}, transparent);`}>
-              {tag}
-            </span>
-          ))
+        badge === "New" && (
+          <p class="portfolio__item-badge portfolio__item-badge--new">
+            New &#9734;
+          </p>
+        )
+      }
+      {
+        (badge === "Updated" || badge === "In Progress") && (
+          <p class="portfolio__item-badge">{badge} &#9734;</p>
+        )
       }
     </div>
-  </div>
-
-  {passwordProtected && <CopyToClipboardBtn {storePassword} />}
-
-  <ul class="utility-list">
-    <a href={link} class="btn" target="_blank"
-      >View {type} <i class="fa-solid fa-arrow-up-right-from-square"></i></a
-    >
-    {
-      githubLink.length > 0 && (
-        <a href={githubLink} class="btn" target="_blank">
-          {type} Preview <i class="fa-solid fa-arrow-up-right-from-square" />
-        </a>
-      )
-    }
-  </ul>
+    <div class="card__title">
+      <p>{title}</p>
+    </div>
+  </a>
+  <a href={`/project/${project.slug}`} class="card__info">
+    <div class="card__info-tech">
+      <Icon name={`icon${mainTech}`} width="24" height="24" />
+      <p>{mainTech}</p>
+    </div>
+    <div class="card__info-more">
+      <p>Details</p>
+      <Icon name="iconArrowRight" width="20" height="20" />
+    </div>
+  </a>
 </div>
 
 <style>
-  /* Badges */
+  /* --------------- */
+  /* General         */
+  /* --------------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* --------------- */
+  /* Component        */
+  /* --------------- */
+  /* div class="card" */
+  .card {
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  /* div class="card__link" */
+  .card__link {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+
+  /* div class="card__image-wrapper" */
+  .card__image-wrapper {
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+
+  /* img class="card__image" */
+  img.card__image {
+    display: block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    color: transparent;
+    aspect-ratio: 1/1;
+    transition: transform 0.1s ease;
+  }
+
+  .card__link:hover img.card__image {
+    transform: scale(1.07);
+  }
+
+  /* div class="card__badge" */
+
+  /* div class="portfolio__item-badge portfolio__item-badge--new" */
   .portfolio__item-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
     background: var(--clr-accent);
     color: #fff;
-    font-size: var(--fs-h4);
+    border: 2px solid var(--clr-light);
+    font-size: var(--fs-reverse-small);
     font-weight: var(--fw-bold);
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-radius: 20px;
-    border: 2px solid #fff;
-    position: absolute;
-    right: 5px;
-    top: 0;
   }
 
   .portfolio__item-badge--new {
@@ -100,113 +128,98 @@ const {
     color: var(--clr-light);
   }
 
-  /* .bhtXlo */
-  .blog-card {
-    color: var(--clr-light);
-    border-radius: 10px;
-    background-color: var(--clr-dark);
-    box-shadow: 1px 1px 10px var(--clr-accent);
-    text-align: center;
-    overflow: hidden;
-    width: 344px;
+  /* svg */
+  svg {
+    background-color: var(--clr-light);
+    border-radius: 50%;
+    border: 1px solid var(--clr-light);
   }
 
-  .img-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
-  }
+  /* div class="portfolio__item-badge" */
 
-  .img-link:hover img {
-    transform: scale(1.1);
-  }
-
-  .img {
-    object-fit: cover;
-    transition: transform 500ms cubic-bezier(0.5, 0, 0.5, 1);
-  }
-
-  .title-content {
-    text-align: center;
-    width: 100%;
-  }
-
-  .h3 {
-    margin: 15px 0 0 0;
+  /* div class="card__title" */
+  .card__title {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 33.3333%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(0, 0, 0, 0.5)
+    );
+    padding: 1rem;
     font-weight: 600;
-    letter-spacing: 2px;
-    color: var(--clr-accent);
-    padding: 0px;
-    font-size: 1.5rem;
+    color: var(--clr-light);
+
+    width: 100%;
+    font-size: var(--fs-reverse-h3);
+    line-height: 1.75rem;
   }
 
-  .hr {
-    width: 50px;
-    height: 3px;
-    margin: 20px auto;
-    border-radius: 0px none;
-    border: 0;
-    background: rgb(208, 187, 87);
-  }
-
-  .card-info {
-    padding: 0 1em;
-    color: #fff;
-    line-height: 24px;
-    text-align: justify;
-  }
-
-  .tag-list {
+  .card__link:hover .card__title {
     display: flex;
+  }
+
+  /* p */
+  .card__title p {
+    width: 100%;
+    text-align: left;
+  }
+
+  /* a class="card__info" */
+
+  .card__info {
+    margin-top: 0.75rem;
+    width: 100%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: var(--fs-reverse-small);
+    line-height: 1.25rem;
+
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.1s ease;
+  }
+
+  /* div class="card__info-tech" */
+  .card__info-tech {
+    gap: 0.5rem;
     justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    font-weight: bold;
-    margin: 0 1rem;
+    display: flex;
+    align-items: center;
   }
 
-  .tag {
-    margin-left: 0.5rem;
-  }
-
-  .tag:not(:last-child)::after {
-    content: ",";
+  /* p */
+  .card__info-tech p {
     color: var(--clr-light);
   }
 
-  .password {
-    margin-top: 0.5rem;
-  }
-
-  .utility-list {
-    padding: 0 20px;
+  /* div class="card__info-more" */
+  .card__info-more {
+    gap: 0.75rem;
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    gap: 10px 0;
-    justify-content: space-around;
-    margin: 0.5rem 0 1.5rem 0;
+    align-items: center;
+    transition: transform 0.1s ease;
   }
 
-  .btn {
-    display: block;
-    padding: 0.75em;
+  .card__info:hover .card__info-more,
+  .card__link:hover + .card__info .card__info-more {
+    transform: scale(1.07);
   }
 
-  .btn i {
-    margin-left: 0.5rem;
-  }
-
-  .btn:hover {
-    transform: scale(1.05);
-  }
-
-  .scale-on-hover:hover h3 {
-    text-decoration: underline;
-  }
-
-  @media screen and (min-width: 416px) {
-    .blog-card {
-      width: 400px;
-    }
+  /* p */
+  .card__info-more p {
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
   }
 </style>
