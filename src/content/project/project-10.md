@@ -11,8 +11,7 @@ link: https://mythology-blog.vercel.app
 passwordProtected: false
 storePassword: none
 githubLink: ""
-shortIntro: A blog about mythology with articles supported by AI-generated images. Powered by Astro, this project offers a seamlessly fast and immersive reading experience. Leveraging the power of SEO, our content shines on Google's search pages. Additionally, we've integrated Google AdSense to deliver relevant and engaging ads.
+shortIntro: <p>A blog about mythology with articles supported by AI-generated images. Powered by Astro, this project offers a seamlessly fast and immersive reading experience. Leveraging the power of SEO, our content shines on Google's search pages. Additionally, we've integrated Google AdSense to deliver relevant and engaging ads.</p>
 ---
 
-Notes:
-badge: New, Updated, In Progress
+No Details Yet...

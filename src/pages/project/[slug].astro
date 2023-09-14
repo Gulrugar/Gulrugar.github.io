@@ -1,7 +1,9 @@
 ---
+import "../../styles/project.css";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import CopyToClipboardBtn from "../../components/CopyToClipboardBtn.astro";
+import { Icon } from "astro-icon";
 
 export async function getStaticPaths() {
   const projects = await getCollection("project");
@@ -20,7 +22,6 @@ type Props = {
 
 const { project } = Astro.props as Props;
 const {
-  order,
   title,
   mainTech,
   image = "/images/project-placeholder.jpg",
@@ -32,6 +33,8 @@ const {
   githubLink,
   shortIntro,
 } = project.data;
+
+const { Content } = await project.render();
 ---
 
 <Layout title="Drew's Portfolio">
@@ -81,7 +84,7 @@ const {
             {
               githubLink.length > 0 && (
                 <a href={githubLink} class="btn" target="_blank">
-                  {type} Preview{" "}
+                  GitHub Repo
                   <i class="fa-solid fa-arrow-up-right-from-square" />
                 </a>
               )
@@ -91,172 +94,209 @@ const {
       </div>
     </div>
   </div>
+  <div class="show-more-btn__wrapper">
+    <span
+      class="btn show-more-btn"
+      onclick="document.getElementById('show-more').style.display = 'block'; this.style.display = 'none'"
+    >
+      More Details
+      <Icon name="iconDownArrow" width="15" height="15" />
+    </span>
+  </div>
+  <div id="show-more" class="wrap">
+    <div class="list-post markdown">
+      <Content />
+    </div>
+  </div>
+</Layout>
 
-  <style>
-    /* -------------- */
-    /* General        */
-    /* -------------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: inherit;
-    }
+<style>
+  /* -------------- */
+  /* General        */
+  /* -------------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+  }
 
-    p {
-      margin-top: 1em;
-      margin-bottom: 1.25em;
-      line-height: 1.5em;
-    }
+  p {
+    margin-top: 1em;
+    margin-bottom: 1.25em;
+    line-height: 1.5em;
+  }
 
-    /* -------------- */
-    /* Page          */
-    /* -------------- */
+  /* -------------- */
+  /* Page          */
+  /* -------------- */
 
-    /* div class="wrap" */
+  /* div class="wrap" */
+  .wrap {
+    width: 960px;
+    margin: 2rem auto 0;
+    overflow: hidden;
+  }
+
+  @media (max-width: 959px) {
     .wrap {
-      width: 960px;
-      margin: 2rem auto 0;
-      overflow: hidden;
+      width: auto;
+      margin: 1.5rem 10px 0;
     }
+  }
 
-    @media (max-width: 959px) {
-      .wrap {
-        width: auto;
-        margin: 1.5rem 10px 0;
-      }
-    }
+  .wrap:not(:first-child) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
 
-    /* div class="list-post" */
+  /* div class="list-post" */
+  .list-post {
+    box-shadow: 0 3px 4px #00000024, 0 3px 3px -2px #0003, 0 1px 8px #0000001f;
+    margin: 10px 5px;
+    padding: 20px;
+    color: var(--clr-dark);
+  }
+
+  @media (max-width: 959px) {
     .list-post {
-      box-shadow: 0 3px 4px #00000024, 0 3px 3px -2px #0003, 0 1px 8px #0000001f;
-      margin: 30px 5px;
-      padding: 20px;
-      color: var(--clr-dark);
+      box-shadow: none;
+      border: 1px solid #ddd;
+      margin: 10px 10px 40px;
     }
+  }
 
-    @media (max-width: 959px) {
-      .list-post {
-        box-shadow: none;
-        border: 1px solid #ddd;
-        margin: 10px 10px 40px;
-      }
-    }
+  .list-post:first-of-type {
+    margin-top: 10px;
+  }
 
-    .list-post:first-of-type {
-      margin-top: 10px;
-    }
+  /* p class="list-title" */
+  .list-post .list-title {
+    background-color: var(--clr-accent);
+    margin: -20px -20px 0;
+    padding: 10px 20px;
+  }
 
-    /* p class="list-title" */
-    .list-post .list-title {
-      background-color: var(--clr-accent);
-      margin: -20px -20px 0;
-      padding: 10px 20px;
-    }
+  .list-post .list-title {
+    color: var(--clr-light);
+    font-weight: 600;
+    font-size: 24px;
+  }
 
-    .list-post .list-title {
-      color: var(--clr-light);
-      font-weight: 600;
-      font-size: 24px;
-    }
+  /* div class="list-img" */
+  .list-post .list-img {
+    margin-right: 20px;
+  }
 
-    /* div class="list-img" */
-    .list-post .list-img {
-      margin-right: 20px;
-    }
+  .list-post .list-img,
+  .list-post .list-details {
+    display: inline-block;
+    width: 48%;
+  }
 
+  @media (max-width: 959px) {
     .list-post .list-img,
     .list-post .list-details {
-      display: inline-block;
-      width: 48%;
-    }
-
-    @media (max-width: 959px) {
-      .list-post .list-img,
-      .list-post .list-details {
-        width: 100%;
-      }
-    }
-
-    /* a */
-
-    /* img */
-    .list-post .list-img img {
-      margin: 20px 0 0;
       width: 100%;
-      height: auto;
     }
+  }
 
-    /* div class="list-details" */
+  /* a */
+
+  /* img */
+  .list-post .list-img img {
+    margin: 20px 0 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* div class="list-details" */
+  .list-post .list-details {
+    vertical-align: top;
+    margin-top: 20px;
+  }
+  @media (max-width: 959px) {
     .list-post .list-details {
-      vertical-align: top;
-      margin-top: 20px;
+      margin-top: 0;
     }
-    @media (max-width: 959px) {
-      .list-post .list-details {
-        margin-top: 0;
-      }
-    }
+  }
 
-    /* div class="list-summary" */
+  /* div class="list-summary" */
 
-    /* div */
+  /* div */
 
-    /* div class="tag-list" */
+  /* div class="tag-list" */
 
-    .tag-list {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      text-align: center;
-      font-weight: bold;
-      gap: 0.5rem;
-    }
+  .tag-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: bold;
+    gap: 0.5rem;
+  }
 
-    /* span class="tag" */
+  /* span class="tag" */
 
-    .tag {
-      color: var(--clr-light);
-      padding: 5px 15px;
-      border-radius: 25px;
-    }
+  .tag {
+    color: var(--clr-light);
+    padding: 5px 15px;
+    border-radius: 25px;
+  }
 
-    /* div class="copy-to-clipboard" */
-    .copy-to-clipboard {
-      display: flex;
-      justify-content: center;
-      position: relative;
+  /* div class="copy-to-clipboard" */
+  .copy-to-clipboard {
+    display: flex;
+    justify-content: center;
+    position: relative;
 
-      color: var(--clr-light);
-      background-color: var(--clr-dark);
-      border-radius: 10px;
-      margin: 2rem 0;
-      padding: 0.5rem 0;
-    }
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 0.5rem 0;
+  }
 
-    /* ul class="utility-list" */
+  /* ul class="utility-list" */
 
-    .utility-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px 0;
-      justify-content: space-around;
-      margin: 0.5rem 0 1.5rem 0;
-    }
+  .utility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    justify-content: space-around;
+    margin: 0.5rem 0 1.5rem 0;
+  }
 
-    /* a class="btn" */
+  /* a class="btn" */
 
-    .btn {
-      display: block;
-      padding: 0.75em;
-      text-align: center;
-    }
+  .btn {
+    display: block;
+    padding: 0.75em;
+    text-align: center;
+  }
 
-    .btn i {
-      margin-left: 0.5rem;
-    }
+  .btn i {
+    margin-left: 0.5rem;
+  }
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</Layout>
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+  /* div class="show-more-btn__wrapper" */
+  .show-more-btn__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  /* span class="btn show-more-btn" */
+  .show-more-btn {
+    width: 200px;
+  }
+
+  /* svg */
+  .show-more-btn svg {
+    vertical-align: middle;
+    transform: translateY(-1px);
+  }
+</style>
