@@ -1,0 +1,113 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<section class="page-width" id="about">
+  <div class="container w-container page">
+    <div class="home-about-wrapper">
+      <div class="home-about-text">
+        <h2 class="section__title section__title--about">About</h2>
+        <div class="rte about-rte w-richtext">
+          <p>
+            I'm a 34 year old Fullstack Web Developer. I'm also a college
+            graduate with a Bachelor of Science in Mathematics.
+          </p>
+          <p>
+            I started learning to code so that I could automate making flash
+            cards from online dictionaries. As I became more experienced, I
+            started making my own games.
+          </p>
+          <p>
+            As my skills grew, I realized that I wanted to make web development
+            my career so now use my skills to build websites and apps for
+            customers that provide them with value.
+          </p>
+        </div>
+      </div>
+      <div class="home-about-image">
+        <a href="/images/about-me.webp" target="_blank">
+          <img src="/images/about-me.webp" alt="" loading="lazy" />
+          <Icon name="iconMagnifyingLens" width="40" height="40" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-width {
+    max-width: 1188px;
+    margin: 0 auto;
+  }
+
+  .home-about-wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  .home-about-text {
+    flex: 0 50%;
+    margin-right: 80px;
+  }
+
+  .rte.about-rte {
+    font-size: 17px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 26px;
+  }
+
+  .home-about-image {
+    flex: 0 50%;
+    position: relative;
+  }
+
+  .home-about-image svg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border-radius: 25% 0 0 0;
+    border-top: 1px solid var(--clr-light);
+    border-left: 1px solid var(--clr-light);
+  }
+
+  .home-about-image a:hover svg {
+    transform: scale(1.1);
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  img {
+    cursor: zoom-in;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    box-shadow: var(--bs);
+  }
+
+  @media screen and (max-width: 599px) {
+    .home-about-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .home-about-text {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 799px) {
+    .home-about-text {
+      margin-right: 40px;
+      flex-basis: 60%;
+    }
+  }
+</style>

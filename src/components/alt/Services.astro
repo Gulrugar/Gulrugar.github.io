@@ -1,0 +1,156 @@
+---
+---
+
+<section class="my-services" id="services">
+  <h2 class="section__title section__title--services">What I do</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Full Stack Web Development</h3>
+      <p>
+        Experienced Full Stack Web Developer: MERN Stack & Next.js Specialist.
+        Empowering businesses with custom web solutions and seamless
+        experiences.
+      </p>
+      <p>
+        From intuitive user interfaces to dynamic data management, I deliver
+        efficient and scalable applications tailored to your needs.
+      </p>
+      <p>
+        Let's collaborate to elevate your online ventures. Explore my portfolio
+        for a showcase of my Full Stack Web Development expertise.
+      </p>
+    </div>
+    <div class="service">
+      <h3>Web Design</h3>
+      <p>
+        Offering comprehensive web design solutions, I focus on creating
+        captivating interfaces that align with your brand identity.
+      </p>
+      <p>
+        With meticulous attention to detail and a user-centric approach, I
+        create visually stunning websites that deliver an enjoyable and
+        intuitive browsing experience.
+      </p>
+      <p>
+        By incorporating responsive design techniques and optimizing page load
+        speeds, I strive to deliver a website that not only captures attention
+        but also drives engagement and delivers results for your business.
+      </p>
+    </div>
+    <div class="service">
+      <h3>Search Engine Optimization</h3>
+      <p>
+        As a seasoned SEO specialist, I am dedicated to propelling your website
+        to the forefront of search engine results.
+      </p>
+      <p>
+        With precision and strategic keyword research, I'll boost your online
+        visibility and attract targeted traffic. Witness the transformation as
+        your website climbs the ranks and gains an edge in the competitive
+        digital landscape.
+      </p>
+      <p>
+        Let's embark on the journey to SEO success together, optimizing your
+        online presence for unrivaled results and increased qualified leads.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* My services section */
+
+  .my-services {
+    background-color: rgb(100, 100, 100);
+    background-image: url(/images/services-bg.webp);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    text-align: center;
+  }
+
+  .section__title--services {
+    color: var(--clr-accent);
+    position: relative;
+  }
+
+  .section__title--services::after {
+    content: "";
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+  }
+
+  .services {
+    margin-bottom: 3em;
+  }
+
+  .service {
+    max-width: 500px;
+    margin: 0 auto;
+    flex: 0 0 30%;
+  }
+
+  @media (min-width: 800px) {
+    .services {
+      display: flex;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .service + .service {
+      margin-left: 2em;
+    }
+  }
+
+  .about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-me__img {
+    box-shadow: var(--bs);
+  }
+
+  .section__subtitle--about {
+    min-height: 2rem;
+  }
+
+  @media (min-width: 600px) {
+    .about-me {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      grid-template-areas:
+        "title img"
+        "subtitle img"
+        "text img";
+      gap: 0 2em;
+    }
+
+    .section__title--about {
+      grid-area: title;
+    }
+
+    .section__subtitle--about {
+      /* grid-column or grid-row: 1 / -1 means start at the beginning of
+    this row or column and strech all the way to the end */
+      grid-column: 1 / -1;
+      grid-row: 2;
+      position: relative;
+      left: -1em;
+      width: calc(100% + 2em);
+      padding-left: 1em;
+      padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img {
+      grid-area: img;
+      position: relative;
+      z-index: 2;
+    }
+  }
+</style>

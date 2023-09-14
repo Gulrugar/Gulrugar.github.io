@@ -1,113 +1,121 @@
 ---
-import { Icon } from "astro-icon";
 ---
 
-<section class="page-width" id="about">
-  <div class="container w-container page">
-    <div class="home-about-wrapper">
-      <div class="home-about-text">
-        <h2 class="section__title section__title--about">About</h2>
-        <div class="rte about-rte w-richtext">
-          <p>
-            I'm a 34 year old Fullstack Web Developer. I'm also a college
-            graduate with a Bachelor of Science in Mathematics.
-          </p>
-          <p>
-            I started learning to code so that I could automate making flash
-            cards from online dictionaries. As I became more experienced, I
-            started making my own games.
-          </p>
-          <p>
-            As my skills grew, I realized that I wanted to make web development
-            my career so now use my skills to build websites and apps for
-            customers that provide them with value.
-          </p>
-        </div>
+<section id="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="img-side">
+        <img
+          src="/images/about500x500.webp"
+          alt="man coding on a laptop"
+          class="img-side__main-img"
+        />
       </div>
-      <div class="home-about-image">
-        <a href="/images/about-me.webp" target="_blank">
-          <img src="/images/about-me.webp" alt="" loading="lazy" />
-          <Icon name="iconMagnifyingLens" width="40" height="40" />
-        </a>
+      <div class="text-side">
+        <h3>About Me</h3>
+        <h4>Full Stack Web Developer</h4>
+        <p>
+          I'm a passionate coder residing in the vibrant city of Los Angeles.
+          Over the years, I've embarked on a journey that combines my coding
+          skills with entrepreneurial flair. Through my dedication, I've created
+          a collection of influential blogs that not only share valuable
+          insights but also generate income through strategic ad placements.
+        </p>
+        <p>
+          My expertise in full-stack web application development has allowed me
+          to craft revenue-generating web apps, each tailored to meet specific
+          industry needs. These applications not only reflect my technical
+          proficiency but also contribute to a diverse stream of income.
+        </p>
+        <p>
+          In addition to my digital ventures, I've ventured into the world of
+          e-commerce, proudly operating a successful Shopify store. Here, I
+          offer a range of captivating products that have captured the attention
+          of a wide audience.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  .page-width {
-    max-width: 1188px;
+  /* section id="about"*/
+  #about {
+    background-color: #fff;
+    padding: 6rem 0;
+  }
+
+  @media (max-width: 1020px) {
+    #about {
+      padding: 3rem 0;
+    }
+  }
+
+  /* div class="container" */
+  .container {
     margin: 0 auto;
+    max-width: 66.875rem;
+    padding: 0 2.5rem;
   }
 
-  .home-about-wrapper {
+  /* div class="about-content" */
+  .about-content {
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
   }
 
-  .home-about-text {
-    flex: 0 50%;
-    margin-right: 80px;
+  @media (max-width: 1020px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
   }
 
-  .rte.about-rte {
-    font-size: 17px;
-  }
-
-  p {
-    margin-top: 0;
-    margin-bottom: 15px;
-    line-height: 26px;
-  }
-
-  .home-about-image {
-    flex: 0 50%;
+  /* div class="img-side" */
+  .img-side {
     position: relative;
   }
 
-  .home-about-image svg {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    border-radius: 25% 0 0 0;
-    border-top: 1px solid var(--clr-light);
-    border-left: 1px solid var(--clr-light);
+  /* img class="img-side__main-img" */
+  .img-side__main-img {
+    border-radius: 1.0625rem;
+    height: 25.625rem;
+    width: 25.625rem;
   }
 
-  .home-about-image a:hover svg {
-    transform: scale(1.1);
-  }
-
-  a {
-    display: inline-block;
-  }
-
-  img {
-    cursor: zoom-in;
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    box-shadow: var(--bs);
-  }
-
-  @media screen and (max-width: 599px) {
-    .home-about-wrapper {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .home-about-text {
-      margin-right: 0;
-      margin-bottom: 20px;
+  @media (max-width: 1020px) {
+    .img-side__main-img {
+      margin-bottom: 2.1875rem;
     }
   }
 
-  @media screen and (max-width: 799px) {
-    .home-about-text {
-      margin-right: 40px;
-      flex-basis: 60%;
-    }
+  /* div class="text-side" */
+  .text-side {
+    padding-right: 0.9375rem;
+  }
+
+  /* h3 */
+  .text-side h3 {
+    color: var(--clr-accent);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+    text-transform: uppercase;
+  }
+
+  /* h4 */
+  .text-side h4 {
+    font-size: 1.5625rem;
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+  }
+
+  /* p */
+  .text-side p {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 </style>

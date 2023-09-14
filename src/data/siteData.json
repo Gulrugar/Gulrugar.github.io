@@ -4,5 +4,16 @@
     "src": "/images/devDrewSocial.jpg",
     "alt": "devDrew logo"
   },
-  "updatedAt": "9/13/2023"
+  "updatedAt": "9/13/2023",
+  "services": [
+    "⚡ Full Stack Web Development",
+    "💪 Image Hosting Solutions",
+    "💥 Search Engine Optimization",
+    "💎 Shopify E-commerce Solutions",
+    "👨‍🎤 Stripe Payment Integration",
+    "🦄 Website Maintenance and Support",
+    "🚀 Blog Creation and Management",
+    "🎨 Static Website Development",
+    "🤔 Google AdSense Integration"
+  ]
 }
