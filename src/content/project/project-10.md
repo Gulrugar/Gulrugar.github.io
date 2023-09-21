@@ -10,8 +10,8 @@ type: Project
 link: https://mythology-blog.vercel.app
 passwordProtected: false
 storePassword: none
-githubLink: ""
+githubLink: "https://github.com/Gulrugar/Mythology-Blog"
 shortIntro: <p>A blog about mythology with articles supported by AI-generated images. Powered by Astro, this project offers a seamlessly fast and immersive reading experience. Leveraging the power of SEO, our content shines on Google's search pages. Additionally, we've integrated Google AdSense to deliver relevant and engaging ads.</p>
 ---
 
-No Details Yet...
+Website preview coming soon...
