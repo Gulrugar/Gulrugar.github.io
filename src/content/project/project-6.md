@@ -29,4 +29,6 @@ Key Features:
 3. Mobile Responsive
 4. Filtering by category
 
-![website-complete](https://github.com/Gulrugar/grafbase_flexibble/assets/105955316/53bd12fa-bdfb-49dc-92a4-a70dfd8d89b6)
+<div align="center">
+  <img src="https://github.com/Gulrugar/grafbase_flexibble/assets/105955316/53bd12fa-bdfb-49dc-92a4-a70dfd8d89b6" loading="lazy"/>
+</div>

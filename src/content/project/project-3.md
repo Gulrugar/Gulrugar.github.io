@@ -38,7 +38,9 @@ Installed Apps:
 2. Bundler
 3. Rivo Product Reviews App
 
-![screenshot-homepage](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/030ccfb6-987d-4484-9f6d-922eafb466e3)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/030ccfb6-987d-4484-9f6d-922eafb466e3" loading="lazy"/>
+</div>
 
 ## Store Preview
 
@@ -50,9 +52,13 @@ Customizations on the home page:
 2. Hero Banner uses a Custom CSS block to give the text and button one of the shop's gradient colors
 3. Footer has collapsing menus on mobile
 
-![homepage-customizations-1](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/397758a6-75c3-4549-95ec-4b65a7b79acf)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/397758a6-75c3-4549-95ec-4b65a7b79acf" loading="lazy"/>
+</div>
 
-![homepage-customizations-2](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/a4997b76-8c30-4374-95fc-c3a00b58e8d2)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/a4997b76-8c30-4374-95fc-c3a00b58e8d2" loading="lazy"/>
+</div>
 
 ### Collection Page
 
@@ -62,7 +68,9 @@ Customizations on the collection page:
 2. Filter options for color show color swatches instead of text
 3. Products with color variants display all the variants as separate product cards
 
-![collection-customizations-1](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/0b8bc41a-ecf4-48a2-98b9-d2fe3cf18264)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/0b8bc41a-ecf4-48a2-98b9-d2fe3cf18264" loading="lazy"/>
+</div>
 
 ### Product Page
 
@@ -76,9 +84,17 @@ Customizations on the product page:
 6. Product bundles with the Bundler App
 7. Product reviews with the Rivo Product Reviews App
 
-![product-customizations-1](https://user-images.githubusercontent.com/105955316/248581133-2f41270e-f329-49c0-87a5-6d9d52ed3409.jpg)
-![product-customizations-2](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/91141fbb-f683-4557-9991-5a6e71b36ba2)
-![product-customizations-3](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/a8313a08-36b5-417c-88e5-48c996d819f5)
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/105955316/248581133-2f41270e-f329-49c0-87a5-6d9d52ed3409.jpg" loading="lazy"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/91141fbb-f683-4557-9991-5a6e71b36ba2" loading="lazy"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/a8313a08-36b5-417c-88e5-48c996d819f5" loading="lazy"/>
+</div>
 
 ### Cart Page
 
@@ -87,7 +103,9 @@ Customizations on the cart page:
 1. Trust Badges under Checkout button
 2. Shipping details under Checkout button
 
-![cart-customizations-1](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/fc392fed-0890-44a8-b656-8f8a4c264c7c)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/fc392fed-0890-44a8-b656-8f8a4c264c7c" loading="lazy"/>
+</div>
 
 ### MetaObject Designer Pages
 
@@ -101,8 +119,12 @@ In this example a MetaObject Definition is created called Designer with some ass
 
 Three instances of this definition are created and a page called Designers is associated with a custom template that loops through all the Designer instances and outputs HTML for each.
 
-![designers-page-1](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/6be596be-53bb-4fda-931b-515d29eae415)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/6be596be-53bb-4fda-931b-515d29eae415" loading="lazy"/>
+</div>
 
 A page is also created for each instance and associated with another custom template to create individual Designer pages.
 
-![designers-page-2](https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/b7c99722-e631-4ca1-983d-f8d76a91a270)
+<div align="center">
+  <img src="https://github.com/Gulrugar/Drews-Dev-Shop/assets/105955316/b7c99722-e631-4ca1-983d-f8d76a91a270" loading="lazy"/>
+</div>

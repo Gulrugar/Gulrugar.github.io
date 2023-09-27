@@ -3,7 +3,6 @@ import "../../styles/project.css";
 import Layout from "../../layouts/Layout.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
 import CopyToClipboardBtn from "../../components/CopyToClipboardBtn.astro";
-import { Icon } from "astro-icon";
 
 export async function getStaticPaths() {
   const projects = await getCollection("project");
@@ -93,15 +92,6 @@ const { Content } = await project.render();
         </div>
       </div>
     </div>
-  </div>
-  <div class="show-more-btn__wrapper">
-    <span
-      class="btn show-more-btn"
-      onclick="document.getElementById('show-more').style.display = 'block'; this.style.display = 'none'"
-    >
-      More Details
-      <Icon name="iconDownArrow" width="15" height="15" />
-    </span>
   </div>
   <div id="show-more" class="wrap">
     <div class="list-post markdown">
@@ -279,24 +269,6 @@ const { Content } = await project.render();
   }
 
   .btn:hover {
-    transform: scale(1.05);
-  }
-
-  /* div class="show-more-btn__wrapper" */
-  .show-more-btn__wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-
-  /* span class="btn show-more-btn" */
-  .show-more-btn {
-    width: 200px;
-  }
-
-  /* svg */
-  .show-more-btn svg {
-    vertical-align: middle;
-    transform: translateY(-1px);
+    transform: scale(1.02);
   }
 </style>

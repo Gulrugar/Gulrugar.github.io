@@ -31,7 +31,13 @@ Key points:
 5. Completely mobile responsive
 
 The original design file:
-![original-psd](https://user-images.githubusercontent.com/105955316/250678266-3d3f86ca-62b4-451f-aef1-f8041a93cf70.jpg)
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/105955316/250678266-3d3f86ca-62b4-451f-aef1-f8041a93cf70.jpg" loading="lazy"/>
+</div>
 
 The completed website:
-![website-complete](https://user-images.githubusercontent.com/105955316/250678790-c173c039-b256-444b-833c-c90fbc4fac4d.jpg)
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/105955316/250678790-c173c039-b256-444b-833c-c90fbc4fac4d.jpg" loading="lazy"/>
+</div>
