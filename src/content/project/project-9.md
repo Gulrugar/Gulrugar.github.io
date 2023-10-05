@@ -4,7 +4,7 @@ show_on_frontpage: true
 title: Threads
 mainTech: Next
 image: /images/projects/project-9/threads-project-image.webp
-badge: New
+badge:
 tags: [Next, React, TailwindCSS, Typescript, MongoDB, OAuth]
 type: Project
 link: https://threads-bice.vercel.app
